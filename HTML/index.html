@@ -14,6 +14,8 @@
       @theme {
         --color-body: #070824;
         --color-primary: #93F2FF;
+        --color-border: #29344a;
+        --color-hover: #1d2740;
         --font-mont: 'Montserrat', sans-serif;
       }
     </style>
@@ -24,9 +26,9 @@
 
     <title>Developer Portfolio</title>
 </head>
-<body class="max-w-[80%] bg-body mx-auto">
+<body class="bg-body mx-auto">
 
-<nav class="w-full px-6 py-4 flex items-center justify-between relative">
+<nav class="max-w-[80%] bg-body mx-auto px-6 py-4 flex items-center justify-between relative">
   <!-- Logo -->
   <div class="flex items-center space-x-2">
     <img src="assets/images/logo design confrom-01 1.png" alt="">
@@ -45,7 +47,7 @@
 
   <!-- Menu Items -->
   <ul id="menu"
-      class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:space-x-6 text-sm absolute lg:static top-full left-0 w-full lg:w-auto bg-body lg:bg-transparent mt-2 lg:mt-0 px-6 lg:px-0 py-4 lg:py-0 z-50 ">
+      class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:space-x-6 text-sm absolute lg:static top-full left-0 w-full lg:w-auto bg-body lg:bg-transparent mt-2 lg:mt-0 px-6 lg:px-0 py-4 lg:py-0 ">
     <li><a href="index.html" class="nav-glow relative hover:text-primary text-white block py-2 lg:py-0 active:text-primary font-mont">Home</a></li>
     <li><a href="" class="nav-glow relative  font-mont hover:text-primary text-white block py-2 lg:py-0">Service</a></li>
     <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Portfolio</a></li>
@@ -55,45 +57,163 @@
     <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Contact</a></li>
     <!-- for hamburger -->
     <li class="lg:hidden mt-2 flex flex-col space-y-2">
-      <a href="#" class="px-4 py-2 border border-primary hover:bg-primary rounded-full text-primary text-sm text-center font-mont">Let's Talk</a>
-      <a href="#" class="px-4 py-2 bg-[#87F5FF] text-black font-medium rounded-full text-sm text-center font-mont">Buy Now</a>
+      <a href="#" class="px-4 py-2 border border-primary hover:bg-primary hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
+      <a href="#" class="px-4 py-2 bg-primary text-black font-normal rounded-full text-sm text-center font-mont transition delay-75 duration-300 ease-in-out border hover:bg-body hover:text-primary hover:border">Buy Now</a>
     </li>
     <!-- for desktop -->
     <li class="hidden lg:flex space-x-2 rtl:space-x-reverse">
-      <a href="#" class="px-4 py-2 border border-primary md:hover:bg-primary md:hover:text-body rounded-full text-primary text-sm text-center font-mont">Let's Talk</a>
-      <a href="#" class="px-4 py-2 bg-primary md:hover:bg-body md:hover:text-primary md:hover:border md:border font-mont rounded-full text-sm text-center">Buy Now</a>
+      <a href="#" class="px-4 py-2 border border-primary md:hover:bg-primary md:hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
+      <a href="#" class="px-4 py-2 bg-primary md:hover:bg-body md:hover:text-primary md:hover:border md:border font-mont rounded-full text-sm text-center transition delay-75 duration-300 ease-in-out">Buy Now</a>
       </li>
   </ul>
 </nav>
           <!-- HERO SECTION -->
-<section>
-  <!-- BACKGROUND EFFECT -->
-  <div>
-    <div class="flex justify-between items-center w-full h-full z-0">
-      <div class="w-30 h-30 bg-primary blur opacity-75 rounded-full"></div>
-      <div class="w-30 h-30 bg-primary blur opacity-75 rounded-full"></div>
-      <div class="w-30 h-30 bg-primary blur opacity-75 rounded-full"></div>
-  </div>
-  <!-- welcome to my world-->
-  <div class="bg-[#0B0B28] p-6 flex items-center">
-    <div class="relative px-8 py-4">
-      <h1 class="text-3xl font-bold text-[#8CF4FF]">Welcome To My World</h1>
+           <section class="hero-section max-w-[80%] mx-auto bg-[#10102b] flex justify-between items-center relative mt-20 lg:mt-10 lg:pt-0 lg:pb-0 pt-10 pb-10 lg:pt-0 lg:pb-0 border border-border rounded-3xl ">  
+            <div class=" ml-10 flex flex-col justify-between relative">
+  
+              <!-- welcome to my world-->
+              <div class=" p-4 flex">
+                <div class="relative px-4 py-4">
+                  <h1 class="text-sm font-normal font-mont text-primary">Welcome To My World</h1>
+              
+                  <!-- Top-left corner -->
+                  <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-border"></div>
+                  <!-- Top-right corner -->
+                  <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-border"></div>
+                  <!-- Bottom-left corner -->
+                  <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-border"></div>
+                  <!-- Bottom-right corner -->
+                  <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
+                </div>
+                <!-- social icons -->
+               <div class="flex items-center justify-between space-x-4 ml-10">
+                <a href="#" class="h-10 w-10 border-2 border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-facebook-f "></i></a>
+                <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-instagram"></i></a>
+            
+               </div>
+              
+              </div>
+            <div class="flex flex-col justify-between ">
+                <h1 class="w-full text-7xl text-white font-mont font-extrabold leading-25"> <span class="text-primary">I Design </span>& Build <br>
+                  Unique Product.</h1>
+
+                  <div class="mt-20 flex justify-start   items-center gap-4">
+                    <a href="#" class="text-primary border border-primary rounded-full px-4 py-2 font-mont ">Hi I am John Doe</a>
+                    <a href="#" class="text-body bg-primary border border-primary rounded-full px-4 py-2 font-mont ">Download CV <i class="fa-solid fa-download"></i></a>
+                  </div>
+                  <div class="mt-20  flex items-center gap-4">
+                    <a href="#" class="text-white font-mont text-sm">Scroll Down</a>
+                    <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-solid fa-arrow-down"></i></a>
+                  </div>
+              </div>
+              </div>
+            <!-- profile section -->
+            <div class="relative">
+              <div class="mt-20">
+                <img class="h-[625px] w-[392px]" src="assets/images/image 24.png" alt="">
+              </div>
+              
+            </div>
+           </section>
+           <!-- service section -->
+<section class="services mt-20 mb-20 rounded-bl-xl rounded-br-xl">
+  <div class="mt-20 flex flex-col justify-center items-center">
+    <div class="relative px-4 py-4 mb-20">
+      <h1 class="text-sm font-normal font-mont text-primary">My Specializations Services</h1>
   
       <!-- Top-left corner -->
-      <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#2E2D60]"></div>
+      <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-border"></div>
       <!-- Top-right corner -->
-      <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#2E2D60]"></div>
+      <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-border"></div>
       <!-- Bottom-left corner -->
-      <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#2E2D60]"></div>
+      <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-border"></div>
       <!-- Bottom-right corner -->
-      <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#2E2D60]"></div>
+      <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
+    </div>
+    <h1 class="text-5xl text-white font-mont font-extrabold text-center mt-4">What My Services</h1>
+  </div>
+  <!-- service names -->
+  <div>
+    <div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-[80%] mx-auto font-mont">
+        <div class="card bg-transparent border-2 border-border rounded-lg  p-6 flex flex-col items-center mt-10">
+            <img src="assets/images/wordpress.png" alt="">
+            <h1 class="text-gray-400 font-mont text-xl font-bold mt-6">WordPress Demo Setup</h1>
+            <p class="text-gray-300 text-sm text-center mt-2">This is a fictional personal portfolio crafted as an example your actual skills, experiences.</p>
+        </div>
+        <div class="card bg-transparent border-2 border-border rounded-lg rounded p-6 flex flex-col items-center mt-10">
+            <img src="assets/images/react.png" alt="">
+            <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">React Router Dom</h1>
+            <p class="text-gray-300 text-sm text-center mt-2">React encourages a declarative programming style, where developers describe the.</p>
+        </div>
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mt-10">
+            <img src="assets/images/vue.png" alt="">
+            <h1 class="text-gray-400 font-mont text-xl font-semibold mt-4">What is Vue for next</h1>
+            <p class="text-gray-300 text-sm text-center mt-2">It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based.</p>
+        </div>
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-20">
+            <img src="assets/images/camera.png" alt="">
+            <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Photo Edit With Adobe XD</h1>
+            <p class="text-gray-300 text-sm text-center mt-2">Our online logo maker lets you generate designs perfectly suited to your business from a professionally.</p>
+        </div>
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-20">
+            <img src="assets/images/figma.png" alt="">
+            <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Figma Web Page Design</h1>
+            <p class="text-gray-300 text-sm text-center mt-2">Figma is the leading collaborative design tool for building meaningful products. Seamlessly design.</p>
+        </div>
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-20">
+            <img src="assets/images/tools.png" alt="">
+            <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Photoshop Logo Design</h1>
+            <p class="text-gray-300 text-sm text-center mt-2">Try it free, no obligation! Millions of customers love our logo maker. Premium logo designs created.</p>
+        </div>
+        
+  </div>
+  </div>
+  <div class="relative">
+    <div class="h-40 w-40 bg-[#5C78A0] rounded-full absolute -top-50 blur-3xl "></div>
+
     </div>
   </div>
+  
+  </div>
+</section>
+<!-- my works section -->
+<section class="max-w-[90] mx-auto mt-20">
+  <!-- work heading-->
+  <div>
+    <div class="mt-20 flex flex-col justify-center items-center">
+      <div class="relative px-4 py-4 mb-8">
+        <h1 class="text-sm font-normal font-mont text-primary">My Awesome Works</h1>
+    
+        <!-- Top-left corner -->
+        <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-border"></div>
+        <!-- Top-right corner -->
+        <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-border"></div>
+        <!-- Bottom-left corner -->
+        <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-border"></div>
+        <!-- Bottom-right corner -->
+        <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
+      </div>
+      <h1 class="text-5xl text-white font-mont font-bold text-center">My Recent Works</h1>
+    </div>
+  </div>
+<!-- work navigatin buttons -->
+ <div class=" flex justify-center items-center gap-4 mt-10">
+    <a href="#" class=" px-4 py-3 text-primary border-2 border-primary rounded-full" >All Projects</a>
+    <a href="#" class=" px-4 py-3 text-primary border-2 border-primary rounded-full" >All Projects</a>
+    <a href="#" class=" px-4 py-3 text-primary border-2 border-primary rounded-full" >All Projects</a>
+    <a href="#" class=" px-4 py-3 text-primary border-2 border-primary rounded-full" >All Projects</a>
+    <a href="#" class=" px-4 py-3 text-primary border-2 border-primary rounded-full" >All Projects</a>
+ </div>
 </section>
 
 
     <!-- FLOWBITE SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- FONT AWESOME SCRIPT -->
+    <script src="https://kit.fontawesome.com/ca9429cf5d.js" crossorigin="anonymous"></script>
     <!-- MAIN SCRIPT -->
     <script src="assets/js/index.js"></script>
 </body>
