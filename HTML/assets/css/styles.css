@@ -21,11 +21,31 @@
  
 
 .services{
-  background: 090C28;
+  background: #090C28;
 background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 35%, rgba(48, 75, 110, 1) 100%);
 
 }
 
 .card{
   border-top-right-radius: 100px;
+}
+
+.second-card{
+  border-top-left-radius: 100px;
+  
+}
+.second-card img{
+  border-top-left-radius: 50px;
+}
+
+/* skills */
+.skills{
+  background: 090C28;
+background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 18%, rgba(53, 76, 115, 1) 100%);
+}
+
+
+/* mini card */
+.mini-card{
+  border-top-right-radius: 50px;
 }
