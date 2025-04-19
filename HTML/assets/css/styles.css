@@ -1,0 +1,20 @@
+
+   @media (min-width: 1024px) {
+    .nav-glow::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1.5px;
+      width: 100%;
+      background: radial-gradient(circle, #87F5FF 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav-glow:hover::before,
+    .nav-glow.active::before {
+      opacity: 1;
+    }
+  }

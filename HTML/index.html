@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- FLOWBITE CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind config -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-body: #070824;
+        --color-primary: #93F2FF;
+        --font-mont: 'Montserrat', sans-serif;
+      }
+    </style>
+    <!-- Fonts Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Developer Portfolio</title>
+</head>
+<body class="max-w-[80%] bg-body mx-auto">
+
+<nav class="w-full px-6 py-4 flex items-center justify-between relative">
+  <!-- Logo -->
+  <div class="flex items-center space-x-2">
+    <img src="assets/images/logo design confrom-01 1.png" alt="">
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="lg:hidden">
+    <button id="menu-toggle" class="focus:outline-none">
+      <svg class="w-6 h-6 text-[#87F5FF]" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu Items -->
+  <ul id="menu"
+      class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:space-x-6 text-sm absolute lg:static top-full left-0 w-full lg:w-auto bg-body lg:bg-transparent mt-2 lg:mt-0 px-6 lg:px-0 py-4 lg:py-0 z-50 ">
+    <li><a href="index.html" class="nav-glow relative hover:text-primary text-white block py-2 lg:py-0 active:text-primary font-mont">Home</a></li>
+    <li><a href="" class="nav-glow relative  font-mont hover:text-primary text-white block py-2 lg:py-0">Service</a></li>
+    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Portfolio</a></li>
+    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">My Skills</a></li>
+    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Testimonials</a></li>
+    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Blog</a></li>
+    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Contact</a></li>
+    <!-- for hamburger -->
+    <li class="lg:hidden mt-2 flex flex-col space-y-2">
+      <a href="#" class="px-4 py-2 border border-primary hover:bg-primary rounded-full text-primary text-sm text-center font-mont">Let's Talk</a>
+      <a href="#" class="px-4 py-2 bg-[#87F5FF] text-black font-medium rounded-full text-sm text-center font-mont">Buy Now</a>
+    </li>
+    <!-- for desktop -->
+    <li class="hidden lg:flex space-x-2 rtl:space-x-reverse">
+      <a href="#" class="px-4 py-2 border border-primary md:hover:bg-primary md:hover:text-body rounded-full text-primary text-sm text-center font-mont">Let's Talk</a>
+      <a href="#" class="px-4 py-2 bg-primary md:hover:bg-body md:hover:text-primary md:hover:border md:border font-mont rounded-full text-sm text-center">Buy Now</a>
+      </li>
+  </ul>
+</nav>
+          <!-- HERO SECTION -->
+<section>
+  <!-- BACKGROUND EFFECT -->
+  <div>
+    <div class="flex justify-between items-center w-full h-full z-0">
+      <div class="w-30 h-30 bg-primary blur opacity-75 rounded-full"></div>
+      <div class="w-30 h-30 bg-primary blur opacity-75 rounded-full"></div>
+      <div class="w-30 h-30 bg-primary blur opacity-75 rounded-full"></div>
+  </div>
+  <!-- welcome to my world-->
+  <div class="bg-[#0B0B28] p-6 flex items-center">
+    <div class="relative px-8 py-4">
+      <h1 class="text-3xl font-bold text-[#8CF4FF]">Welcome To My World</h1>
+  
+      <!-- Top-left corner -->
+      <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#2E2D60]"></div>
+      <!-- Top-right corner -->
+      <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#2E2D60]"></div>
+      <!-- Bottom-left corner -->
+      <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#2E2D60]"></div>
+      <!-- Bottom-right corner -->
+      <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#2E2D60]"></div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- FLOWBITE SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
