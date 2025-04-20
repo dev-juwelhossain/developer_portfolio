@@ -30,7 +30,7 @@
 </head>
 <body class="bg-body mx-auto">
 
-<nav class="max-w-[80%] bg-body mx-auto px-6 py-4 flex items-center justify-between relative">
+<nav class="max-w-[80%] bg-body mx-auto px-6 py-4 flex items-center justify-between relative z-50">
   <!-- Logo -->
   <div class="flex items-center space-x-2">
     <img src="assets/images/logo design confrom-01 1.png" alt="">
@@ -70,7 +70,7 @@
   </ul>
 </nav>
           <!-- HERO SECTION -->
-           <section class="hero-section max-w-[80%] mx-auto bg-[#10102b] flex justify-between items-center relative mt-20 lg:mt-10 lg:pt-0 lg:pb-0 pt-10 pb-10 lg:pt-0 lg:pb-0 border border-border rounded-3xl ">  
+           <section class="hero-section max-w-[80%] mx-auto bg-[#10102b] flex lg:justify-between lg:items-center relative mt-20 lg:mt-10 lg:pt-0 lg:pb-0 pt-10 pb-10 lg:pt-0 lg:pb-0 border border-border rounded-3xl ">  
             <div class=" ml-10 flex flex-col justify-between relative">
   
               <!-- welcome to my world-->
@@ -271,7 +271,7 @@
   </div>
 
   <!-- skills section content -->
-   <div class="lg:flex lg:justify-between lg:items-center mt-10 gap-6 grid grid-cols-3 ">
+   <div class="lg:flex lg:justify-between lg:items-center mt-10 gap-6 grid grid-cols-2 ">
     <!-- mini card1 -->
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
@@ -420,8 +420,8 @@
     <!-- Clients Review section-->
      <section class="max-w-[90%] mx-auto mt-20 mb-20">
       <!-- review heading-->
-      <div class="flex justify-between items-center mb-20">
-        <div class="mt-20 flex flex-col items-start w-full">
+      <div class="lg:flex lg:justify-between lg:items-center justify-center items-center mb-20">
+        <div class="mt-20 flex flex-col items-center lg:items-start w-full">
           <div class="relative px-4 py-4 mb-4 mt-6">
             <h1 class="text-sm font-normal font-mont text-white">My Clients Review</h1>
         
@@ -437,7 +437,7 @@
           <h1 class="text-5xl text-white font-mont font-bold text-center">My Clients Review</h1>
         </div>
         <div class="w-[60%] mt-6">
-            <p class="text-white text-md text-center leading-8 font-mont mt-2">
+            <p class="text-white text-md text-start leading-8 font-mont mt-2">
               Throughout the project, communication with your team was seamless and efficient. I appreciated the regular updates and prompt
             </p>
         </div>
@@ -574,6 +574,81 @@
    </div>
 </div>
 
+    </section>
+    <!-- my clients section-->
+     <section class="max-w-[80%] mx-auto mt-20 mb-20">
+      <!-- clients section heading -->
+      <div class="mt-20 flex flex-col justify-center items-center">
+        <div class="relative px-4 py-4 mb-4 mt-6">
+          <h1 class="text-sm font-normal font-mont text-primary">My Awesome Clients</h1>
+      
+          <!-- Top-left corner -->
+          <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-primary"></div>
+          <!-- Top-right corner -->
+          <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-primary"></div>
+          <!-- Bottom-left corner -->
+          <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-primary"></div>
+          <!-- Bottom-right corner -->
+          <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary"></div>
+        </div>
+        <h1 class="text-5xl text-white font-mont font-bold text-center">My Awesome Clients</h1>
+      </div>
+      <!-- company logos -->
+      <div class="grid grid-cols-2 gap-10 lg:gap-6 lg:grid-cols-4 md:grid-cols-3 justify-between items-center mt-20">
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/asana.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/linear.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/framer.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/notin.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/slack.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/medium.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/upwork.png" alt="">
+        </div>
+        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+          <img src="assets/images/amazon.png" alt="">
+        </div>
+       
+        
+      </div>
+
+     </section>
+
+     <!-- Blog section -->
+
+     <section class="max-w-[80%] mx-auto mt-10 mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-1 md:items-center md:justify-center lg:grid-cols-2 gap-10 md:gap-4 lg:gap-6 mt-10 font-mont text-white">
+    
+        <!-- card one -->
+        <div class="mb-6">
+          <div class=" second-card bg h-[390px] w-full bg-border rounded-xl flex flex-col justify-center items-center">
+            <img src="assets/images/image 97.png" alt="" class="h-[300px] w-[450px]  rounded-lg"/>
+          </div>
+          <p class="text-[12px] font-mont mt-6 ml-2 uppercase">Figma & Photoshop</p>
+          <h1 class="text-3xl font-mont font-bold  mt-2 ml-2 leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
+        </div>
+      <!-- card 2 -->
+      <div class="mb-6">
+        <div class=" second-card bg h-[390px] w-full bg-border rounded-xl flex flex-col justify-center items-center">
+          <img src="assets/images/image 97.png" alt="" class="h-[300px] w-[450px]  rounded-lg"/>
+        </div>
+        <p class="text-[12px] font-mont mt-6 ml-2 uppercase">Figma & Photoshop</p>
+        <h1 class="text-3xl font-mont font-bold  mt-2 ml-2 leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
+      </div>
+     
+  
+   </div>
      </section>
 
  </section>
