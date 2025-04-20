@@ -41,11 +41,17 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 35%
 /* skills */
 .skills{
   background: 090C28;
-background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 18%, rgba(53, 76, 115, 1) 100%);
+  background-image: linear-gradient(to bottom, #263b58, #1e2f4b, #16233d, #0e1730, #070824);
 }
 
 
 /* mini card */
 .mini-card{
   border-top-right-radius: 50px;
+}
+
+/* experience card  */
+.exp-card{
+  border-top-right-radius:70px;
+  border-bottom-left-radius: 70px;
 }
