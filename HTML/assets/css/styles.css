@@ -55,3 +55,9 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 35%
   border-top-right-radius:70px;
   border-bottom-left-radius: 70px;
 }
+
+
+/* static card  */
+.static-card{
+  border-top-right-radius: 70px;
+}
