@@ -21,7 +21,7 @@
  
 
 .services{
-  background: #090C28;
+background: #090C28;
 background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 35%, rgba(48, 75, 110, 1) 100%);
 
 }
@@ -31,11 +31,11 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(20, 30, 57, 1) 35%
 }
 
 .second-card{
-  border-top-left-radius: 100px;
+  border-top-left-radius: 70px;
   
 }
 .second-card img{
-  border-top-left-radius: 70px;
+  border-top-left-radius: 50px;
 }
 
 /* skills */

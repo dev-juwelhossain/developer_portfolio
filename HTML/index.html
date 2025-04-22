@@ -74,7 +74,7 @@
             <div class=" ml-10 flex flex-col justify-between relative">
   
               <!-- welcome to my world-->
-              <div class=" p-4 flex">
+              <div class=" max-w-[90%] mx-auto p-4 grid md:grid-cols-2 grid-cols-1 sm:flex-col justify-between items-center gap-6 md:justify-between lg:justify-between lg:items-center mb-4">
                 <div class="relative px-4 py-4">
                   <h1 class="text-sm font-normal font-mont text-primary">Welcome To My World</h1>
               
@@ -88,7 +88,7 @@
                   <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
                 </div>
                 <!-- social icons -->
-               <div class="flex items-center justify-between space-x-4 ml-10">
+               <div class="flex items-center justify-center gap-4 mb-6">
                 <a href="#" class="h-10 w-10 border-2 border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-facebook-f "></i></a>
                 <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-brands fa-x-twitter"></i></a>
@@ -98,29 +98,29 @@
               
               </div>
             <div class="flex flex-col justify-between ">
-                <h1 class="w-full text-7xl text-white font-mont font-extrabold leading-25"> <span class="text-primary">I Design </span>& Build <br>
+                <h1 class="w-full text-6xl font-bold md:text-7xl text-white font-mont md:font-extrabold text-start"> <span class="text-primary">I Design </span>& Build <br>
                   Unique Product.</h1>
 
-                  <div class="mt-20 flex justify-start   items-center gap-4">
-                    <a href="#" class="text-primary border border-primary rounded-full px-4 py-2 font-mont ">Hi I am John Doe</a>
-                    <a href="#" class="text-body bg-primary border border-primary rounded-full px-4 py-2 font-mont ">Download CV <i class="fa-solid fa-download"></i></a>
+                  <div class="w-[90%] mt-20 grid grid-cols-1 md:grid-cols-2 justify-start   items-center gap-4">
+                    <a href="#" class="text-primary border text-center border-primary rounded-full px-4 py-2 font-mont  hover:text-body hover:bg-primary hover:border-body">Hi I am John Doe</a>
+                    <a href="#" class="text-body bg-primary border border-primary rounded-full px-4 py-2 font-mont text-center hover:bg-body hover:text-primary ">Download CV <i class="fa-solid fa-download"></i></a>
                   </div>
-                  <div class="mt-20  flex items-center gap-4">
+                  <div class="mt-20  flex justify-center md:justify-start items-center gap-4">
                     <a href="#" class="text-white font-mont text-sm">Scroll Down</a>
                     <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-solid fa-arrow-down"></i></a>
                   </div>
               </div>
               </div>
             <!-- profile section -->
-            <div class="relative">
+            <div class="relative hidden md:block lg:block">
               <div class="mt-20">
-                <img class="h-[625px] w-[392px]" src="assets/images/image 24.png" alt="">
+                <img class="h-[625px] w-[392px] none" src="assets/images/image 24.png" alt="">
               </div>
               
             </div>
            </section>
            <!-- service section -->
-<section class="services mt-20 mb-20 rounded-bl-xl rounded-br-xl">
+<section class="services mt-20 mb-20 rounded-bl-xl rounded-br-xl py-10">
   <div class="mt-20 flex flex-col justify-center items-center">
     <div class="relative px-4 py-4 mb-20">
       <h1 class="text-sm font-normal font-mont text-primary">My Specializations Services</h1>
@@ -134,7 +134,7 @@
       <!-- Bottom-right corner -->
       <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
     </div>
-    <h1 class="text-5xl text-white font-mont font-extrabold text-center mt-4">What My Services</h1>
+    <h1 class="md:text-5xl text-3xl text-white font-mont font-bold md:font-extrabold text-center mt-4">What My Services</h1>
   </div>
   <!-- service names -->
   <div>
@@ -155,12 +155,12 @@
             <h1 class="text-gray-400 font-mont text-xl font-semibold mt-4">What is Vue for next</h1>
             <p class="text-gray-300 text-sm text-center mt-2">It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based.</p>
         </div>
-        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-20">
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-10">
             <img src="assets/images/camera.png" alt="">
             <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Photo Edit With Adobe XD</h1>
             <p class="text-gray-300 text-sm text-center mt-2">Our online logo maker lets you generate designs perfectly suited to your business from a professionally.</p>
         </div>
-        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-20">
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-10">
             <img src="assets/images/figma.png" alt="">
             <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Figma Web Page Design</h1>
             <p class="text-gray-300 text-sm text-center mt-2">Figma is the leading collaborative design tool for building meaningful products. Seamlessly design.</p>
@@ -198,11 +198,11 @@
         <!-- Bottom-right corner -->
         <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
       </div>
-      <h1 class="text-5xl text-white font-mont font-bold text-center">My Recent Works</h1>
+      <h1 class="md:text-5xl text-2xl text-white font-mont font-bold text-center">My Recent Works</h1>
     </div>
   </div>
 <!-- work navigatin buttons -->
- <div class=" flex justify-center items-center gap-4 mt-12">
+ <div class="w-full flex justify-center items-center gap-4 mt-12 overflow-x-auto font-mont">
     <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >All Projects</a>
     <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >Web Design</a>
     <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >Figma Design</a>
@@ -213,36 +213,36 @@
  <div class="grid grid-cols-1 md:grid-cols-1 md:items-center md:justify-center lg:grid-cols-2 gap-10 md:gap-4 lg:gap-6 mt-10 font-mont text-white">
     
       <!-- card one -->
-    <div class="mb-6 w-[90%]">
-      <div class=" second-card bg h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 96.png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+    <div class="mb-6 md:w-[90%]">
+      <div class=" second-card h-auto py-6 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
+        <img src="assets/images/image 96.png" alt="" class="rounded-lg"/>
       </div>
         <p class="text-[12px] font-mont mt-6 ml-2">WEB DESIGN & DEVELOPMENT</p>
-        <h1 class="text-3xl font-mont font-bold  mt-2 ml-2 leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
+        <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
     </div>
     <!-- card 2 -->
-    <div class="mb-6 w-[90%]">
-      <div class=" second-card  h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 97.png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+    <div class="mb-6 md:w-[90%]">
+      <div class=" second-card  h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
+        <img src="assets/images/image 97.png" alt="" class="rounded-lg"/>
       </div>
       <p class="text-[12px] font-mont mt-6 ml-2 uppercase">Figma & Photoshop</p>
-      <h1 class="text-3xl font-mont font-bold  mt-2 ml-2 leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
+      <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
     </div>
     <!-- card 3 -->
-    <div class="mb-6 w-[90%]">
-      <div class=" second-card bg h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 98.png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+    <div class="mb-6 md:w-[90%]">
+      <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
+        <img src="assets/images/image 98.png" alt="" class="rounded-lg"/>
       </div>
         <p class="text-[12px] font-mont mt-6 ml-2 uppercase">Photoshop & Adobe XD</p>
-        <h1 class="text-3xl font-mont font-bold  mt-2 ml-2 leading-12">Both API styles are fully capable of covering common use cases.</h1>
+        <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Both API styles are fully capable of covering common use cases.</h1>
     </div>
      <!-- card 4 -->
-     <div class="mb-6 w-[90%]">
-      <div class=" second-card h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 98.png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+     <div class="mb-6 md:w-[90%]">
+      <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
+        <img src="assets/images/image 98.png" alt="" class="rounded-lg"/>
       </div>
       <p class="text-[12px] font-mont mt-6 ml-2 uppercase">WEB DESIGN & DEVELOPMENT</p>
-      <h1 class="text-3xl font-mont font-bold  mt-2 ml-2 leading-12">You don't have to commit to only one style during the learning phase.</h1>
+      <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">You don't have to commit to only one style during the learning phase.</h1>
     </div>
 
  </div>
@@ -346,6 +346,7 @@
     </div>
    </div>
   </div>
+</section>
   <!-- EXPERIENCE SECTION -->
     <section class="experience max-w-[80%] mx-auto mt-20 mb-20">
       <!-- experience card -->
@@ -434,10 +435,10 @@
             <!-- Bottom-right corner -->
             <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-white"></div>
           </div>
-          <h1 class="text-5xl text-white font-mont font-bold text-center">My Clients Review</h1>
+          <h1 class="md:text-5xl text-3xl text-white font-mont font-bold text-center mt-2">My Clients Review</h1>
         </div>
-        <div class="w-[60%] mt-6">
-            <p class="text-white text-md text-start leading-8 font-mont mt-2">
+        <div class="md:w-[60%] mt-6">
+            <p class="text-white text-md md:text-start text-center leading-8 font-mont mt-2">
               Throughout the project, communication with your team was seamless and efficient. I appreciated the regular updates and prompt
             </p>
         </div>
@@ -446,60 +447,7 @@
       
 
 <div class="lg:flex lg:justify-between lg:items-center grid grid-cols-1 md:grid-cols-2 gap-4 ">
-  <!-- carousel card -->
-  <div id="default-carousel" class="relative static-card bg-card px-8 py-8 w-full rounded-lg shadow-lg shadow-blue-950" data-carousel="slide">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-         <!-- Item 1 -->
-        <div class=" duration-700 ease-in-out" data-carousel-item>
-            <img src="assets/images/image 24.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-fit" alt="...">
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out object-cover" data-carousel-item>
-            <img src="assets/images/5677-removebg-preview.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="...">
-        </div>
-        
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-    </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-    <!-- Slider controls -->
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-  </div>
-
-
+ 
   <!-- static card 1 -->
    <div class="static-card bg-card px-8 py-8 w-full rounded-lg shadow-lg shadow-blue-950">
     <div>
@@ -572,6 +520,42 @@
       </div>
     </div>
    </div>
+   <!-- statice card 3 -->
+   <div class="static-card bg-card px-8 py-8 w-full rounded-lg shadow-lg shadow-blue-950">
+    <div>
+      <div class="flex justify-between items-center px-4">
+        <div class="flex justify-center items-center">
+          <p class="text-white text-xl font-mont font-semibold mr-4">5.0</p>
+          <p class="text-orange-400"><i class="fa-solid fa-star"></i></p>
+          <p class="text-orange-400"><i class="fa-solid fa-star"></i></p>
+          <p class="text-orange-400"><i class="fa-solid fa-star"></i></p>
+          <p class="text-orange-400"><i class="fa-solid fa-star"></i></p>
+          <p class="text-orange-400"><i class="fa-solid fa-star"></i></p>
+        </div>
+        <p class="text-border text-7xl"><i class="fa-solid fa-quote-left"></i></p>
+      </div>
+      <div class="lg:mt-20 md:mt-18 mt-12">
+        <p class="text-card-font text-start font-mont leading-7">
+          Your team demonstrated a high level of professionalism and expertise in their respective roles. From project management to technical execution, everyone involved exhibited. outcome. Overall, I am extremely pleased with the outcome .
+        </p>
+      </div>
+      <!-- client profile -->
+      <div class="flex justify-start gap-4 mt-10">
+        <div>
+          <img src="assets/images/client2.png" class="rounded-md w-10 h-10" alt="">
+        </div>
+        <div class="text-card-font font-mont">
+          <p>Irin Pervin</p>
+          <p class="text-sm">Figma Designer</p>
+        </div>
+      </div>
+    </div>
+    <!-- bottom glow -->
+    <div class="ralative">
+      <div class="h-40 w-40 bg-primary rounded-full absolute translate-x-1/2 -translate-y-30 blur-3xl opacity-20 overflow-hidden">
+      </div>
+    </div>
+   </div>
 </div>
 
     </section>
@@ -579,7 +563,7 @@
      <section class="max-w-[80%] mx-auto mt-20 mb-20">
       <!-- clients section heading -->
       <div class="mt-20 flex flex-col justify-center items-center">
-        <div class="relative px-4 py-4 mb-4 mt-6">
+        <div class="relative px-4 py-4 mb-6 mt-6">
           <h1 class="text-sm font-normal font-mont text-primary">My Awesome Clients</h1>
       
           <!-- Top-left corner -->
@@ -591,36 +575,34 @@
           <!-- Bottom-right corner -->
           <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-primary"></div>
         </div>
-        <h1 class="text-5xl text-white font-mont font-bold text-center">My Awesome Clients</h1>
+        <h1 class="md:text-5xl text-2xl text-white font-mont font-bold text-center">My Awesome Clients</h1>
       </div>
       <!-- company logos -->
-      <div class="grid grid-cols-2 gap-10 lg:gap-6 lg:grid-cols-4 md:grid-cols-3 justify-between items-center mt-20">
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+      <div class="grid grid-cols-2 gap-4 lg:gap-6 lg:grid-cols-4 md:grid-cols-3 justify-between items-center mt-20">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/asana.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/linear.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/framer.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/notin.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/slack.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/medium.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/upwork.png" alt="">
         </div>
-        <div class="w-full h-[130px] bg-card flex justify-center items-center rounded-lg">
+        <div class="w-full md:h-[130px] px-10 py-6 bg-card flex justify-center items-center rounded-lg">
           <img src="assets/images/amazon.png" alt="">
         </div>
-       
-        
       </div>
 
      </section>
@@ -642,88 +624,88 @@
               <!-- Bottom-right corner -->
               <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-white"></div>
             </div>
-            <h1 class="text-5xl text-white font-mont font-bold text-center">My Recent Blog</h1>
+            <h1 class="md:text-5xl text-3xl text-white font-mont font-bold text-center">My Recent Blog</h1>
           </div>
           <!-- blog card secton -->
           <div class="grid grid-cols-1 md:grid-cols-1 md:items-center md:justify-center lg:grid-cols-2 gap-10 md:gap-4 lg:gap-6 mt-10 font-mont text-white">
     
             <!-- card one -->
-            <div class="mb-6 w-[90%]">
-              <div class=" second-card bg h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950">
-               <img src="assets/images/blog (4).png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+            <div class="mb-6 md:w-[90%]">
+              <div class=" second-card h-auto py-4 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border  hover:shadow-lg hover:shadow-blue-950">
+               <img src="assets/images/blog (4).png" alt="blog image 4" class=" rounded-lg"/>
               </div>
               <!-- Tag button -->
-               <div class="flex justify-between items-center mt-4">
-                <div class="flex gap-3 items-center mt-4">
-                  <a href="#" class=" px-5 py-2 text-sm text-primary bg-[#151f3a] border-1 border-border rounded-full" >Tech Learn</a>
-                  <a href="#" class=" px-5 py-2 text-sm text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >Vue JS</a>
+               <div class="flex justify-between items-center mt-2">
+                <div class="flex gap-3 items-center mt-2">
+                  <p class=" md:px-5 px-2 md:py-2 py-1 text-[10px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Tech Learn</p>
+                  <p class=" md:px-5 px-2 md:py-2 py-1 text-[10px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >Vue JS</p>
                 </div>
-                <div class="flex justify-center items-center gap-2 text-md font-mont text-card-font">
-                  <p class="text-lg"><i class="fa-regular fa-clock"></i></p>
+                <div class="flex justify-center items-center gap-2 text-sm md:text-md font-mont text-card-font mt-2">
+                  <p class="md:text-md"><i class="fa-regular fa-clock"></i></p>
                   <p>3 Minute Read</p>
                 </div>
                </div>
-                <h1 class="text-3xl font-mont font-bold  mt-4 ml-2 leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
+                <h1 class="md:text-3xl text-xl font-mont font-bold  mt-4 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
             </div>
           <!-- card 2 -->
-          <div class="mb-6 w-[90%]">
-            <div class=" second-card bg h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950">
-             <img src="assets/images/blog (3).png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+          <div class="mb-6 md:w-[90%]">
+            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-1 border-border hover:shadow-lg hover:shadow-blue-950">
+             <img src="assets/images/blog (3).png" alt="" class="rounded-lg"/>
             </div>
             <!-- Tag button -->
-             <div class="flex justify-between items-center mt-4">
-              <div class="flex gap-3 items-center mt-4">
-                <a href="#" class=" px-5 py-2 text-sm text-primary bg-[#151f3a] border-1 border-border rounded-full" >Web Design</a>
-                <a href="#" class=" px-5 py-2 text-sm text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >App Development</a>
+             <div class="flex justify-between items-center mt-2">
+              <div class="flex gap-3 items-center mt-2">
+                <p  class="  md:px-5 px-2 md:py-2 py-1 text-[8px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Web Design</p>
+                <p class=" md:px-5 px-2 md:py-2 py-1 text-[8px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >App Development</p>
               </div>
-              <div class="flex justify-center items-center gap-2 text-md font-mont text-card-font">
-                <p class="text-lg"><i class="fa-regular fa-clock"></i></p>
-                <p>6 Minute Read</p>
+              <div class="flex justify-center items-center gap-2 font-mont text-card-font">
+                <p class="md:text-lg text-sm"><i class="fa-regular fa-clock"></i></p>
+                <p class="text-sm">6 Minute Read</p>
               </div>
              </div>
-              <h1 class="text-3xl font-mont font-bold  mt-4 ml-2 leading-12">React lets you build user interfaces out of individual pieces called</h1>
+              <h1 class="md:text-3xl text-xl font-mont font-bold  mt-2 ml-2 md:leading-12">React lets you build user interfaces out of individual pieces called</h1>
           </div>
           <!-- card 3 -->
-          <div class="mb-6 w-[90%]">
-            <div class=" second-card bg h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950">
-             <img src="assets/images/blog (2).png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+          <div class="mb-6 md:w-[90%]">
+            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950">
+             <img src="assets/images/blog (2).png" alt="" class="rounded-lg"/>
             </div>
             <!-- Tag button -->
-             <div class="flex justify-between items-center mt-4">
-              <div class="flex gap-3 items-center mt-4">
-                <a href="#" class=" px-5 py-2 text-sm text-primary bg-[#151f3a] border-1 border-border rounded-full" >Web Design</a>
-                <a href="#" class=" px-5 py-2 text-sm text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >App Development</a>
+             <div class="flex justify-between items-center mt-2">
+              <div class="flex gap-3 items-center mt-2">
+                <a href="#" class=" md:px-5 px-2 md:py-2 py-1 text-[8px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Web Design</a>
+                <a href="#" class=" md:px-5 px-2 md:py-2 py-1 text-[8px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >App Development</a>
               </div>
-              <div class="flex justify-center items-center gap-2 text-md font-mont text-card-font">
-                <p class="text-lg"><i class="fa-regular fa-clock"></i></p>
-                <p>2 Minute Read</p>
+              <div class="flex justify-center items-center gap-2 font-mont text-card-font">
+                <p class="md:text-md"><i class="fa-regular fa-clock"></i></p>
+                <p class="text-sm">2 Minute Read</p>
               </div>
              </div>
-              <h1 class="text-3xl font-mont font-bold  mt-4 ml-2 leading-12">Whether you work on your own or with thousands of other</h1>
+              <h1 class="md:text-3xl text-xl font-mont font-bold  mt-4 ml-2 md:leading-12">Whether you work on your own or with thousands of other</h1>
           </div>
            <!-- card 4 -->
-           <div class="mb-6 w-[90%]">
-            <div class=" second-card bg h-[400px] w-full bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950">
-             <img src="assets/images/blog (1).png" alt="" class="h-[340px] w-[90%]  rounded-lg"/>
+           <div class="mb-6 md:w-[90%]">
+            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
+             <img src="assets/images/blog (1).png" alt="" class="rounded-lg"/>
             </div>
             <!-- Tag button -->
              <div class="flex justify-between items-center mt-4">
-              <div class="flex gap-3 items-center mt-4">
-                <a href="#" class=" px-5 py-2 text-sm text-primary bg-[#151f3a] border-1 border-border rounded-full" >Graphic Design</a>
-                <a href="#" class=" px-5 py-2 text-sm text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >Figma Design</a>
+              <div class="flex gap-2 items-center mt-2">
+                <a href="#" class="  md:px-5 px-2 md:py-2 py-1 md:text-md text-[8px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Graphic Design</a>
+                <a href="#" class="  md:px-5 px-2 md:py-2 py-1 md:text-md text-[8px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >Figma Design</a>
               </div>
-              <div class="flex justify-center items-center gap-2 text-md font-mont text-card-font">
-                <p class="text-lg"><i class="fa-regular fa-clock"></i></p>
-                <p>3 Minute Read</p>
+              <div class="flex justify-center items-center gap-2 font-mont text-card-font mt-2">
+                <p class="md:text-md text-sm"><i class="fa-regular fa-clock"></i></p>
+                <p class="text-sm md:text-lg ">3 Minute Read</p>
               </div>
              </div>
-              <h1 class="text-3xl font-mont font-bold  mt-4 ml-2 leading-12">Want to show some content conditionally for react js</h1>
+              <h1 class="md:text-3xl text-xl font-mont font-bold  mt-4 ml-2 md:leading-12">Want to show some content conditionally for react js</h1>
           </div>
        </div>
      </section>
 
      <!-- contact Section -->
-      <section class="max-w-[80%] mx-auto mt-20 mb-20">
+      <section class="md:max-w-[80%] max-w-[90%] mx-auto mt-20 mb-20">
         <!-- contact section heading -->
         <div class="mt-20 flex flex-col justify-center items-center">
           <div class="relative px-4 py-4 mb-4 mt-6">
@@ -738,28 +720,28 @@
             <!-- Bottom-right corner -->
             <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
           </div>
-          <h1 class="text-5xl text-white font-mont font-bold text-center">Contact With Me</h1>
+          <h1 class="md:text-5xl text-3xl text-white font-mont font-bold text-center">Contact With Me</h1>
         </div>
         <!-- contact section content -->
-        <section class=" grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 justify-between items-center">
+        <section class=" w-full  grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 md:justify-between md:items-start">
           <!-- contact form -->
           <div class="contact-card w-full font-mont mt-10 lg:mt-20 bg-card px-10 mr-4 rounded-lg shadow-lg shadow-blue-950 pb-20 pt-20 border-1 border-border">
-            <h1 class="text-4xl text-white font-bold">Send Me A Message</h1>
+            <h1 class="md:text-4xl text-2xl text-white font-bold">Send Me A Message</h1>
             <form action="" class="mt-10">
-              <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-10 items-center">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:mt-10 mt-4 items-center">
                 <div class="flex flex-col ">
-                  <input type="text" name="" id="" placeholder="Name" class="mt-10 rounded-md bg-body placeholder:text-card-font border-none focus:ring-border text-card-font"/>  
+                  <input type="text" placeholder="Name" class="md:mt-10 mt-4 rounded-md bg-body placeholder:text-card-font border-none focus:ring-border text-card-font"/>  
                 </div>
                 <div class="flex flex-col">
-                  <input type="text" name="" id="" placeholder="Number" class=" mt-10 rounded-md bg-body placeholder:text-card-font border-none focus:ring-border text-card-font"/>
+                  <input type="text" placeholder="Number" class=" md:mt-10 md:mt-4 rounded-md bg-body placeholder:text-card-font border-none focus:ring-border text-card-font"/>
                 </div>
               </div>
-              <div class="flex flex-col mt-4">
-                <input type="email" name="" id="" placeholder="Email" class=" mt-10 rounded-md bg-body text-card-font placeholder:text-card-font border-none focus:ring-border"/>
-                <input type="text" name="" id="" placeholder="Your Subject" class="mt-10 rounded-md bg-body text-card-font placeholder:text-card-font border-none focus:ring-border"/>
-                <textarea name="" id="" cols="30" rows="6" placeholder="Your Message" class="mt-10 text-card-font rounded-md bg-body placeholder:text-card-font border-none focus:ring-border"></textarea>
-                <div class="mt-16 font-mont">
-                  <a href="#" class="px-4 py-3 bg-primary text-body
+              <div class="flex flex-col md:mt-4">
+                <input type="email" placeholder="Email" class=" md:mt-10 mt-4 rounded-md bg-body text-card-font placeholder:text-card-font border-none focus:ring-border"/>
+                <input type="text" placeholder="Your Subject" class="md:mt-10 mt-4 rounded-md bg-body text-card-font placeholder:text-card-font border-none focus:ring-border"/>
+                <textarea name="" id="" cols="30" rows="6" placeholder="Your Message" class="md:mt-10 mt-4 text-card-font rounded-md bg-body placeholder:text-card-font border-none focus:ring-border"></textarea>
+                <div class="mt-16 font-mont flex justify-center items-center">
+                  <a href="" class="px-4 py-3 bg-primary text-body
                    items-center gap-3  text-md rounded-full hover:bg-body hover:text-primary border-1 hover:border-primary">Send Message <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
               </div>
@@ -770,7 +752,7 @@
             </div>
           </div>
           <!-- my address -->
-           <div class=" contact-card w-[70%] mx-auto bg-card flex flex-col justify-center items-center font-mont mt-10 lg:mt-20 px-10 py-10 pr-24 rounded-xl shadow-lg shadow-blue-950 border-1 border-border">
+           <div class=" contact-card md:w-[70%] w-full mx-auto bg-card flex flex-col justify-center items-center font-mont mt-10 lg:mt-20 py-10 px-5 md:px-10 md:py-10 md:pr-24 rounded-xl shadow-lg shadow-blue-950 border-1 border-border">
               <div>
                 <div class="bg-body h-8 w-8 rounded-full justify-center items-center flex border-2 border-border mb-4">
                   <p class="text-primary bg-[#151f3a] h-6 w-6 rounded-full justify-center items-center flex border-2 border-border"><i class="fa-solid fa-headset"></i></p>
@@ -809,16 +791,16 @@
       <!-- footer section -->
        <section class="max-w-[90%] mx-auto mt-20 mb-20 bg-card rounded-lg py-16">
         <!-- newsletter section -->
-         <div class="max-w-[90%] mx-auto mt-20 mb-20 bg-card rounded-xl border-1 border-border px-16 py-16 shadow-sm shadow-border">
-            <div class=" flex justify-between items-center ">
-              <div class="text-white text-4xl font-mont font-semibold text-center">
+         <div class="md:max-w-[90%] w-full mx-auto mt-20 mb-20 bg-card rounded-xl border-1 border-border md:px-16 md:py-16 py-10 shadow-sm shadow-border">
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-between items-center gap-4">
+              <div class="text-white md:text-4xl lg:5xl text-2xl font-mont font-semibold text-center">
                 <h1>Subscribe Newsletter</h1>
               </div>
-              <div class="w-full sm:w-5/12">
+              <div class="w-full">
                 <form
-                    class="flex rounded-full px-4 py-2 bg-card border-2 border-border">
-                    <input type="email" name="" id="" placeholder="Enter Your Email" class="w-full  rounded-full bg-card text-card-font placeholder:font-mont border-none focus:ring-border"/>
-                    <button class="shrink-0 flex justify-between items-center gap-3 font-mont rounded-full bg-primary text-body px-6 py-3 text-md font-medium" type="submit">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+                    class="flex rounded-full md:px-4 md:py-2 bg-card border-2 border-border mx-3">
+                    <input type="email" placeholder="Enter Your Email" class="w-full  rounded-full bg-card text-card-font placeholder:font-mont border-none focus:ring-border"/>
+                    <button class="shrink-0 flex justify-between items-center gap-1 md:gap-3 font-mont rounded-full bg-primary text-body md:px-6 md:py-3 py-2 px-4 md:text-md text-sm font-medium" type="submit">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
 
@@ -827,30 +809,30 @@
          </div>
          <!-- footer div -->
           
-          <div class="max-w-[80%] mx-auto flex justify-between items-center mb-20">
-            <div class="flex gap-8 items-center font-mont text-card-font">
+          <div class="md:max-w-[80%] w-full mx-auto flex flex-col md:flex-row gap-10 justify-center items-center md:justify-between md:items-center mb-20">
+            <div class="flex md:gap-8 gap-4 text-sm md:text-md items-center font-mont text-card-font">
               <a href="#">ABOUT US</a>
               <a href="#">DISCOVER</a>
               <a href="#">EXPLORE</a>
               <a href="#">BOOKS</a>
             </div>
-            <div class="flex gap-10 items-center font-mont text-card-font text-3xl">
+            <div class="flex md:gap-10 gap-8 items-center font-mont text-card-font md:text-3xl ">
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
               <a href="#"><i class="fa-brands fa-twitter"></i></a>
               <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
               <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </div>
           </div>
-          <hr class="border-1 border-border max-w-[80%] mx-auto"/>
+          <hr class="border-1 border-border max-w-[80%] mx-auto">
           <!-- copywrite & policy -->
-          <div class="max-w-[80%] mx-auto flex justify-between items-center mt-10 mb-20 font-mont text-card-font">
+          <div class="md:max-w-[80%] w-full mx-auto flex flex-col md:flex-row gap-10 md:justify-between items-center mt-10 mb-20 font-mont text-card-font">
             <div>
               <p class="flex gap-2 items-center font-mont"><i class="fa-regular fa-copyright"></i>2025 <span class="text-primary"> SoftCode Loop </span> |  All rights reserved.</p>
             </div>
             <img src="assets/images/softcodeloop.png" alt="" class="h-16 w-60"/>
-            <div class=" flex gap-6 items-center font-mont>
-              <a href="#" class="text-card-font">Privacy Policy</a>
-              <a href="#" class="text-card-font">Terms & Conditions</a>
+            <div class=" flex gap-10 justify-between items-center font-mont">
+              <a href="" class="text-card-font">Privacy Policy</a>
+              <a href="" class="text-card-font">Terms & Conditions</a>
             </div>
 
           </div>
