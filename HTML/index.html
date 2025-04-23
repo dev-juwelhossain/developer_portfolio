@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- FLOWBITE CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <!-- TAILWIND CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- tailwind config -->
-    <style type="text/tailwindcss">
-      @theme {
-        --color-body: #070824;
-        --color-primary: #93F2FF;
-        --color-border: #29344a;
-        --color-hover: #1d2740;
-        --color-card:#12132d;
-        --color-card-font:#D6DAF0;
-        --font-mont: 'Montserrat', sans-serif;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              body: '#070824',
+              primary: '#93F2FF',
+              border: '#29344a',
+              hover: '#1d2740',
+              card: '#12132d',
+              cardFont: '#D6DAF0',
+            },
+            fontFamily: {
+              mont: ['Montserrat', 'sans-serif'],
+            },
+          },
+        },
       }
-    </style>
+    </script>
     <!-- Fonts Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +65,7 @@
     <!-- for hamburger -->
     <li class="lg:hidden mt-2 flex flex-col space-y-2">
       <a href="#" class="px-4 py-2 border border-primary hover:bg-primary hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
-      <a href="#" class="px-4 py-2 bg-primary text-black font-normal rounded-full text-sm text-center font-mont transition delay-75 duration-300 ease-in-out border hover:bg-body hover:text-primary hover:border">Buy Now</a>
+      <a href="#" class="px-4 py-2 bg-primary text-black font-normal rounded-full text-sm text-center font-mont transition delay-75 duration-300 ease-in-out border hover:bg-body hover:text-primary hover:border-primary">Buy Now</a>
     </li>
     <!-- for desktop -->
     <li class="hidden lg:flex space-x-2 rtl:space-x-reverse">
@@ -74,7 +79,7 @@
             <div class=" ml-10 flex flex-col justify-between relative">
   
               <!-- welcome to my world-->
-              <div class=" max-w-[90%] mx-auto p-4 grid md:grid-cols-2 grid-cols-1 sm:flex-col justify-between items-center gap-6 md:justify-between lg:justify-between lg:items-center mb-4">
+              <div class=" max-w-[90%] mx-auto p-4 grid md:grid-cols-2 grid-cols-1 sm:flex-col justify-between items-center gap-6 md:items-center md:justify-between lg:justify-between lg:items-center mb-4">
                 <div class="relative px-4 py-4">
                   <h1 class="text-sm font-normal font-mont text-primary">Welcome To My World</h1>
               
@@ -88,7 +93,7 @@
                   <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-border"></div>
                 </div>
                 <!-- social icons -->
-               <div class="flex items-center justify-center gap-4 mb-6">
+               <div class="flex items-center justify-center gap-4 mt-2">
                 <a href="#" class="h-10 w-10 border-2 border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-facebook-f "></i></a>
                 <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover "><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-brands fa-x-twitter"></i></a>
@@ -107,20 +112,20 @@
                   </div>
                   <div class="mt-20  flex justify-center md:justify-start items-center gap-4">
                     <a href="#" class="text-white font-mont text-sm">Scroll Down</a>
-                    <a href="#" class="h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="#" class="animate-bounce h-10 w-10 border border-border rounded-full flex justify-center items-center text-primary hover:bg-hover"><i class="fa-solid fa-arrow-down"></i></a>
                   </div>
               </div>
               </div>
             <!-- profile section -->
             <div class="relative hidden md:block lg:block">
               <div class="mt-20">
-                <img class="h-[625px] w-[392px] none" src="assets/images/image 24.png" alt="">
+                <img class="h-[625px] w-[392px] none" src="assets/images/image24.png" alt="">
               </div>
               
             </div>
            </section>
            <!-- service section -->
-<section class="services mt-20 mb-20 rounded-bl-xl rounded-br-xl py-10">
+<section id="services" class="services mt-20 mb-20 rounded-bl-xl rounded-br-xl py-10">
   <div class="mt-20 flex flex-col justify-center items-center">
     <div class="relative px-4 py-4 mb-20">
       <h1 class="text-sm font-normal font-mont text-primary">My Specializations Services</h1>
@@ -165,7 +170,7 @@
             <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Figma Web Page Design</h1>
             <p class="text-gray-300 text-sm text-center mt-2">Figma is the leading collaborative design tool for building meaningful products. Seamlessly design.</p>
         </div>
-        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-20">
+        <div class="card bg-transparent border-2 border-border rounded-lg p-6 flex flex-col items-center mb-10">
             <img src="assets/images/tools.png" alt="">
             <h1 class="text-gray-400 font-mont text-xl font-bold mt-4">Photoshop Logo Design</h1>
             <p class="text-gray-300 text-sm text-center mt-2">Try it free, no obligation! Millions of customers love our logo maker. Premium logo designs created.</p>
@@ -179,7 +184,6 @@
     </div>
   </div>
   
-  </div>
 </section>
 <!-- my works section -->
 <section class="max-w-[90%] mx-auto mt-20">
@@ -203,43 +207,43 @@
   </div>
 <!-- work navigatin buttons -->
  <div class="w-full flex justify-center items-center gap-4 mt-12 overflow-x-auto font-mont">
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >All Projects</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >Web Design</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >Figma Design</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >Photoshop</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 border-border rounded-full" >React JS</a>
+    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out  border-border rounded-full" >All Projects</a>
+    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >Web Design</a>
+    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >Figma Design</a>
+    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >Photoshop</a>
+    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >React JS</a>
  </div>
  <!-- card design -->
  <div class="grid grid-cols-1 md:grid-cols-1 md:items-center md:justify-center lg:grid-cols-2 gap-10 md:gap-4 lg:gap-6 mt-10 font-mont text-white">
     
       <!-- card one -->
     <div class="mb-6 md:w-[90%]">
-      <div class=" second-card h-auto py-6 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 96.png" alt="" class="rounded-lg"/>
+      <div class=" second-card h-auto py-6 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+        <img src="assets/images/image96.png" alt="" class="rounded-lg">
       </div>
         <p class="text-[12px] font-mont mt-6 ml-2">WEB DESIGN & DEVELOPMENT</p>
         <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
     </div>
     <!-- card 2 -->
     <div class="mb-6 md:w-[90%]">
-      <div class=" second-card  h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 97.png" alt="" class="rounded-lg"/>
+      <div class=" second-card  h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+        <img src="assets/images/image97.png" alt="" class="rounded-lg">
       </div>
       <p class="text-[12px] font-mont mt-6 ml-2 uppercase">Figma & Photoshop</p>
       <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
     </div>
     <!-- card 3 -->
     <div class="mb-6 md:w-[90%]">
-      <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 98.png" alt="" class="rounded-lg"/>
+      <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+        <img src="assets/images/image98.png" alt="" class="rounded-lg">
       </div>
         <p class="text-[12px] font-mont mt-6 ml-2 uppercase">Photoshop & Adobe XD</p>
         <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Both API styles are fully capable of covering common use cases.</h1>
     </div>
      <!-- card 4 -->
      <div class="mb-6 md:w-[90%]">
-      <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-        <img src="assets/images/image 98.png" alt="" class="rounded-lg"/>
+      <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+        <img src="assets/images/image98.png" alt="" class="rounded-lg">
       </div>
       <p class="text-[12px] font-mont mt-6 ml-2 uppercase">WEB DESIGN & DEVELOPMENT</p>
       <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">You don't have to commit to only one style during the learning phase.</h1>
@@ -276,10 +280,10 @@
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
         <!-- Bottom glow overlay -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-50 blur-2xl rounded-full transition-all duration-300 z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-30 blur-2xl rounded-full transition-all duration-300 ease-in-out delay-75 z-10 pointer-events-none"></div>
       
         <!-- Content -->
-        <img src="assets/images/figma2.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20" />
+        <img src="assets/images/figma2.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20">
         <p class="text-white text-2xl font-mont mt-2 font-semibold z-20">95%</p>
       </div>
       <p class="text-white text-xl font-mont mt-2 lg:text-center">Figma Design</p>
@@ -288,10 +292,10 @@
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
         <!-- Bottom glow overlay -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-50 blur-2xl rounded-full transition-all duration-300 z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-30 blur-2xl rounded-full transition-all duration-300 ease-in-out delay-75 z-10 pointer-events-none"></div>
       
         <!-- Content -->
-        <img src="assets/images/ps.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20" />
+        <img src="assets/images/ps.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20">
         <p class="text-white text-2xl font-mont mt-2 font-semibold z-20">100%</p>
       </div>
       <p class="text-white text-xl font-mont mt-2 lg:text-center">Photoshop</p>
@@ -300,10 +304,10 @@
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
         <!-- Bottom glow overlay -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-50 blur-2xl rounded-full transition-all duration-300 z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-30 blur-2xl rounded-full transition-all duration-300 ease-in-out delay-75 z-10 pointer-events-none"></div>
       
         <!-- Content -->
-        <img src="assets/images/xd.png" alt="XD Icon" class="w-12 h-12 mb-2 z-20" />
+        <img src="assets/images/xd.png" alt="XD Icon" class="w-12 h-12 mb-2 z-20">
         <p class="text-white text-2xl font-mont mt-2 font-semibold z-20">85%</p>
       </div>
       <p class="text-white text-xl font-mont mt-2 lg:text-center">XD Design</p>
@@ -312,10 +316,10 @@
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
         <!-- Bottom glow overlay -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-50 blur-2xl rounded-full transition-all duration-300 z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-30 blur-2xl rounded-full transition-all duration-300 ease-in-out delay-75 z-10 pointer-events-none"></div>
       
         <!-- Content -->
-        <img src="assets/images/ai.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20" />
+        <img src="assets/images/ai.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20">
         <p class="text-white text-2xl font-mont mt-2 font-semibold z-20">65%</p>
       </div>
       <p class="text-white text-xl font-mont mt-2 lg:text-center">Ai Generators</p>
@@ -324,10 +328,10 @@
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
         <!-- Bottom glow overlay -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-50 blur-2xl rounded-full transition-all duration-300 z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-30 blur-2xl rounded-full transition-all duration-300 ease-in-out delay-75 z-10 pointer-events-none"></div>
       
         <!-- Content -->
-        <img src="assets/images/react2.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20" />
+        <img src="assets/images/react2.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20">
         <p class="text-white text-2xl font-mont mt-2 font-semibold z-20">85%</p>
       </div>
       <p class="text-white text-xl font-mont mt-2 lg:text-center">React Native</p>
@@ -336,10 +340,10 @@
     <div class="">
       <div class="mini-card relative w-40 h-44 bg-body rounded-xl flex flex-col items-center justify-center overflow-hidden group">
         <!-- Bottom glow overlay -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-50 blur-2xl rounded-full transition-all duration-300 z-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-20 bg-cyan-300 opacity-0 group-hover:opacity-30 blur-2xl rounded-full transition-all duration-300 ease-in-out delay-75 z-10 pointer-events-none"></div>
       
         <!-- Content -->
-        <img src="assets/images/pstman.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20" />
+        <img src="assets/images/pstman.png" alt="Figma Icon" class="w-12 h-12 mb-2 z-20">
         <p class="text-white text-2xl font-mont mt-2 font-semibold z-20">65%</p>
       </div>
       <p class="text-white text-xl font-mont mt-2 lg:text-center">Postman Tools</p>
@@ -354,16 +358,16 @@
            <!--Educational Expericence card -->
         <div class="exp-card bg-card rounded-lg border-2 border-border">
           <div class="max-w-[90%] mx-auto bg-transparent pt-10 pb-10 z-20">
-            <h1 class="text-card-font text-3xl font-bold font-mont">Educational Experience</h1>
+            <h1 class="text-cardFont text-3xl font-bold font-mont">Educational Experience</h1>
             <div class="flex justify-between items-center font-mont mt-6">
-              <p class="text-card-font text-sm">2015-2019</p>
+              <p class="text-cardFont text-sm">2015-2019</p>
               <p class="text-primary text-sm">3.50/5</p>
             </div>
-            <div class="flex flex-col justify-between gap-2 text-card-font font-mont mt-3 mb-4">
+            <div class="flex flex-col justify-between gap-2 text-cardFont font-mont mt-3 mb-4">
               <h1 class="text-lg font-bold">BS in Computer Science of SE</h1>
               <h1 class="text-sm">Ungraduate Program</h1>
             </div>
-            <hr class="border-t border-card-font mb-6">
+            <hr class="border-t border-cardFont mb-6">
             <!-- glowing effect -->
             <div class="ralative">
               <div>
@@ -372,10 +376,10 @@
             </div>
             <div>
               <div class="flex justify-between items-center font-mont mt-2 text-sm">
-                <p class="text-card-font">2019 - 2022</p>
+                <p class="text-cardFont">2019 - 2022</p>
                 <p class="text-primary">4.60/5</p>
               </div>
-              <div class="flex flex-col justify-between gap-3 text-card-font font-mont mt-3 mb-2">
+              <div class="flex flex-col justify-between gap-3 text-cardFont font-mont mt-3 mb-2">
                 <h1 class="text-lg font-bold">BBA Major in Accounting BBA</h1>
                 <h1 class="text-sm">University of Uk/London</h1>
               </div>
@@ -386,16 +390,16 @@
         <!-- Job Experience Card -->
         <div class="exp-card bg-card rounded-lg border-2 border-border">
           <div class="max-w-[90%] mx-auto bg-transparent pt-10 pb-10 z-20">
-            <h1 class="text-card-font text-3xl font-bold font-mont">Job Experience</h1>
+            <h1 class="text-cardFont text-3xl font-bold font-mont">Job Experience</h1>
             <div class="flex justify-between items-center font-mont mt-6">
-              <p class="text-card-font text-sm">2015-2019</p>
+              <p class="text-cardFont text-sm">2015-2019</p>
               <p class="text-primary text-sm">4 years</p>
             </div>
-            <div class="flex flex-col justify-between gap-2 text-card-font font-mont mt-3 mb-4">
+            <div class="flex flex-col justify-between gap-2 text-cardFont font-mont mt-3 mb-4">
               <h1 class="text-lg font-bold">Google Marketing Officer</h1>
               <h1 class="text-sm">United States Calefornia</h1>
             </div>
-            <hr class="border-t border-card-font mb-6">
+            <hr class="border-t border-cardFont mb-6">
             <!-- glowing effect -->
             <div class="ralative">
               <div>
@@ -404,10 +408,10 @@
             </div>
             <div>
               <div class="flex justify-between items-center font-mont mt-2 text-sm">
-                <p class="text-card-font">2019 - 2022</p>
+                <p class="text-cardFont">2019 - 2022</p>
                 <p class="text-primary">4.60/5</p>
               </div>
-              <div class="flex flex-col justify-between gap-3 text-card-font font-mont mt-3 mb-2">
+              <div class="flex flex-col justify-between gap-3 text-cardFont font-mont mt-3 mb-2">
                 <h1 class="text-lg font-bold">Grameenphone Engineer</h1>
                 <h1 class="text-sm">United Kingdom Bradford</h1>
               </div>
@@ -463,7 +467,7 @@
         <p class="text-border text-7xl"><i class="fa-solid fa-quote-left"></i></p>
       </div>
       <div class="lg:mt-20 md:mt-18 mt-12">
-        <p class="text-card-font text-start font-mont leading-8">
+        <p class="text-cardFont text-start font-mont leading-8">
           I hope this message finds you well. I wanted to take a moment to provide some feedback on the recent project we collaborated on. Overall, I am extremely pleased with the outcome. Overall, I am extremely pleased with the outcome .  
         </p>
       </div>
@@ -472,7 +476,7 @@
         <div>
           <img src="assets/images/client1.png" class="rounded-md w-10 h-10" alt="">
         </div>
-        <div class="text-card-font font-mont">
+        <div class="text-cardFont font-mont">
           <p>Al Amin Bali</p>
           <p class="text-sm">Lead Manager</p>
         </div>
@@ -499,7 +503,7 @@
         <p class="text-border text-7xl"><i class="fa-solid fa-quote-left"></i></p>
       </div>
       <div class="lg:mt-20 md:mt-18 mt-12">
-        <p class="text-card-font text-start font-mont leading-7">
+        <p class="text-cardFont text-start font-mont leading-7">
           Your team demonstrated a high level of professionalism and expertise in their respective roles. From project management to technical execution, everyone involved exhibited. outcome. Overall, I am extremely pleased with the outcome .
         </p>
       </div>
@@ -508,7 +512,7 @@
         <div>
           <img src="assets/images/client2.png" class="rounded-md w-10 h-10" alt="">
         </div>
-        <div class="text-card-font font-mont">
+        <div class="text-cardFont font-mont">
           <p>Irin Pervin</p>
           <p class="text-sm">Figma Designer</p>
         </div>
@@ -535,7 +539,7 @@
         <p class="text-border text-7xl"><i class="fa-solid fa-quote-left"></i></p>
       </div>
       <div class="lg:mt-20 md:mt-18 mt-12">
-        <p class="text-card-font text-start font-mont leading-7">
+        <p class="text-cardFont text-start font-mont leading-7">
           Your team demonstrated a high level of professionalism and expertise in their respective roles. From project management to technical execution, everyone involved exhibited. outcome. Overall, I am extremely pleased with the outcome .
         </p>
       </div>
@@ -544,7 +548,7 @@
         <div>
           <img src="assets/images/client2.png" class="rounded-md w-10 h-10" alt="">
         </div>
-        <div class="text-card-font font-mont">
+        <div class="text-cardFont font-mont">
           <p>Irin Pervin</p>
           <p class="text-sm">Figma Designer</p>
         </div>
@@ -631,8 +635,8 @@
     
             <!-- card one -->
             <div class="mb-6 md:w-[90%]">
-              <div class=" second-card h-auto py-4 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border  hover:shadow-lg hover:shadow-blue-950">
-               <img src="assets/images/blog (4).png" alt="blog image 4" class=" rounded-lg"/>
+              <div class=" second-card h-auto py-4 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border  hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+               <img src="assets/images/blog4.png" alt="blog image 4" class=" rounded-lg">
               </div>
               <!-- Tag button -->
                <div class="flex justify-between items-center mt-2">
@@ -640,7 +644,7 @@
                   <p class=" md:px-5 px-2 md:py-2 py-1 text-[10px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Tech Learn</p>
                   <p class=" md:px-5 px-2 md:py-2 py-1 text-[10px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >Vue JS</p>
                 </div>
-                <div class="flex justify-center items-center gap-2 text-sm md:text-md font-mont text-card-font mt-2">
+                <div class="flex justify-center items-center gap-2 text-sm md:text-md font-mont text-cardFont mt-2">
                   <p class="md:text-md"><i class="fa-regular fa-clock"></i></p>
                   <p>3 Minute Read</p>
                 </div>
@@ -649,8 +653,8 @@
             </div>
           <!-- card 2 -->
           <div class="mb-6 md:w-[90%]">
-            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-1 border-border hover:shadow-lg hover:shadow-blue-950">
-             <img src="assets/images/blog (3).png" alt="" class="rounded-lg"/>
+            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-1 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+             <img src="assets/images/blog3.png" alt="" class="rounded-lg">
             </div>
             <!-- Tag button -->
              <div class="flex justify-between items-center mt-2">
@@ -658,7 +662,7 @@
                 <p  class="  md:px-5 px-2 md:py-2 py-1 text-[8px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Web Design</p>
                 <p class=" md:px-5 px-2 md:py-2 py-1 text-[8px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >App Development</p>
               </div>
-              <div class="flex justify-center items-center gap-2 font-mont text-card-font">
+              <div class="flex justify-center items-center gap-2 font-mont text-cardFont">
                 <p class="md:text-lg text-sm"><i class="fa-regular fa-clock"></i></p>
                 <p class="text-sm">6 Minute Read</p>
               </div>
@@ -667,8 +671,8 @@
           </div>
           <!-- card 3 -->
           <div class="mb-6 md:w-[90%]">
-            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950">
-             <img src="assets/images/blog (2).png" alt="" class="rounded-lg"/>
+            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border      hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+             <img src="assets/images/blog2.png" alt="" class="rounded-lg">
             </div>
             <!-- Tag button -->
              <div class="flex justify-between items-center mt-2">
@@ -676,7 +680,7 @@
                 <a href="#" class=" md:px-5 px-2 md:py-2 py-1 text-[8px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Web Design</a>
                 <a href="#" class=" md:px-5 px-2 md:py-2 py-1 text-[8px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >App Development</a>
               </div>
-              <div class="flex justify-center items-center gap-2 font-mont text-card-font">
+              <div class="flex justify-center items-center gap-2 font-mont text-cardFont">
                 <p class="md:text-md"><i class="fa-regular fa-clock"></i></p>
                 <p class="text-sm">2 Minute Read</p>
               </div>
@@ -685,8 +689,8 @@
           </div>
            <!-- card 4 -->
            <div class="mb-6 md:w-[90%]">
-            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950">
-             <img src="assets/images/blog (1).png" alt="" class="rounded-lg"/>
+            <div class=" second-card h-auto py-4 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
+             <img src="assets/images/blog1.png" alt="" class="rounded-lg">
             </div>
             <!-- Tag button -->
              <div class="flex justify-between items-center mt-4">
@@ -694,7 +698,7 @@
                 <a href="#" class="  md:px-5 px-2 md:py-2 py-1 md:text-md text-[8px] text-primary bg-[#151f3a] border-1 border-border rounded-full" >Graphic Design</a>
                 <a href="#" class="  md:px-5 px-2 md:py-2 py-1 md:text-md text-[8px] text-indigo-600 bg-[#0e0f3a] border-1 border-border rounded-full" >Figma Design</a>
               </div>
-              <div class="flex justify-center items-center gap-2 font-mont text-card-font mt-2">
+              <div class="flex justify-center items-center gap-2 font-mont text-cardFont mt-2">
                 <p class="md:text-md text-sm"><i class="fa-regular fa-clock"></i></p>
                 <p class="text-sm md:text-lg ">3 Minute Read</p>
               </div>
@@ -726,20 +730,20 @@
         <section class=" w-full  grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 md:justify-between md:items-start">
           <!-- contact form -->
           <div class="contact-card w-full font-mont mt-10 lg:mt-20 bg-card px-10 mr-4 rounded-lg shadow-lg shadow-blue-950 pb-20 pt-20 border-1 border-border">
-            <h1 class="md:text-4xl text-2xl text-white font-bold">Send Me A Message</h1>
-            <form action="" class="mt-10">
+            <h2 class="md:text-4xl text-2xl text-white font-bold">Send Me A Message</h2>
+            <form class="mt-10">
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:mt-10 mt-4 items-center">
                 <div class="flex flex-col ">
-                  <input type="text" placeholder="Name" class="md:mt-10 mt-4 rounded-md bg-body placeholder:text-card-font border-none focus:ring-border text-card-font"/>  
+                  <input type="text" placeholder="Name" class="md:mt-10 md:mt-4 py-2 px-2 rounded-md bg-body placeholder:text-cardFont border-none focus:outline-none text-cardFont">  
                 </div>
                 <div class="flex flex-col">
-                  <input type="text" placeholder="Number" class=" md:mt-10 md:mt-4 rounded-md bg-body placeholder:text-card-font border-none focus:ring-border text-card-font"/>
+                  <input type="text" placeholder="Number" class=" md:mt-10 md:mt-4 py-2 px-2 rounded-md bg-body placeholder:text-cardFont border-none focus:outline-none text-cardFont">
                 </div>
               </div>
               <div class="flex flex-col md:mt-4">
-                <input type="email" placeholder="Email" class=" md:mt-10 mt-4 rounded-md bg-body text-card-font placeholder:text-card-font border-none focus:ring-border"/>
-                <input type="text" placeholder="Your Subject" class="md:mt-10 mt-4 rounded-md bg-body text-card-font placeholder:text-card-font border-none focus:ring-border"/>
-                <textarea name="" id="" cols="30" rows="6" placeholder="Your Message" class="md:mt-10 mt-4 text-card-font rounded-md bg-body placeholder:text-card-font border-none focus:ring-border"></textarea>
+                <input type="email" placeholder="Email" class=" md:mt-10 mt-4 py-2 px-2 rounded-md bg-body text-cardFont placeholder:text-cardFont border-none focus:outline-none">
+                <input type="text" placeholder="Your Subject" class="md:mt-10 mt-4 py-2 px-2 rounded-md bg-body text-cardFont placeholder:text-cardFont border-none focus:outline-none">
+                <textarea cols="30" rows="6" placeholder="Your Message" class="md:mt-10 mt-4 text-cardFont rounded-md bg-body placeholder:text-cardFont border-none focus:outline-none  py-2 px-2"></textarea>
                 <div class="mt-16 font-mont flex justify-center items-center">
                   <a href="" class="px-4 py-3 bg-primary text-body
                    items-center gap-3  text-md rounded-full hover:bg-body hover:text-primary border-1 hover:border-primary">Send Message <i class="fa-solid fa-chevron-right"></i></a>
@@ -757,9 +761,9 @@
                 <div class="bg-body h-8 w-8 rounded-full justify-center items-center flex border-2 border-border mb-4">
                   <p class="text-primary bg-[#151f3a] h-6 w-6 rounded-full justify-center items-center flex border-2 border-border"><i class="fa-solid fa-headset"></i></p>
                 </div>
-                <h1 class="text-xl text-card-font font-mont font-semibold">Get Support</h1>
-                <p class="text-md text-card-font font-mont">If you want to communicate with live please <span class="text-primary">Skype online </span>contact me.</p>
-                 <div class="mt-4 flex flex-col gap-1 text-card-font font-mont mb-4">
+                <h2 class="text-xl text-cardFont font-mont font-semibold">Get Support</h2>
+                <p class="text-md text-cardFont font-mont">If you want to communicate with live please <span class="text-primary">Skype online </span>contact me.</p>
+                 <div class="mt-4 flex flex-col gap-1 text-cardFont font-mont mb-4">
                     <p><span class="font-semibold">Phone Number: </span>01922222224</p>
                     <p><span class="font-semibold">Phone Number: </span>01922222224</p>
                     
@@ -769,19 +773,19 @@
                 <div class="bg-body h-8 w-8 rounded-full justify-center items-center flex border-2 border-border mb-4">
                   <p class="text-primary bg-[#151f3a] h-6 w-6 rounded-full justify-center items-center flex border-2 border-border"><i class="fa-solid fa-headset"></i></p>
                 </div>
-                <h1 class="text-xl text-card-font font-mont font-semibold mb-2">Communication With Mail</h1>
-                <p class="text-md text-card-font font-mont">Please submit your email in my email and please as soon as possible.</p>
+                <h2 class="text-xl text-cardFont font-mont font-semibold mb-2">Communication With Mail</h2>
+                <p class="text-md text-cardFont font-mont">Please submit your email in my email and please as soon as possible.</p>
                  <div class="mt-2 flex flex-col gap-1 mb-4">
-                    <p class="text-md text-card-font font-mont"><span class="font-bold">Email Address 01:</span> admin@gmail.com</p>
-                    <p class="text-md text-card-font font-mont"><span class="font-bold">Email Address 01:</span> admin@gmail.com</p>
+                    <p class="text-md text-cardFont font-mont"><span class="font-bold">Email Address 01:</span> admin@gmail.com</p>
+                    <p class="text-md text-cardFont font-mont"><span class="font-bold">Email Address 01:</span> admin@gmail.com</p>
                   </div>
               </div>
               <div>
                 <div class="bg-body h-8 w-8 rounded-full justify-center items-center flex border-2 border-border mb-4">
                   <p class="text-primary bg-[#151f3a] h-6 w-6 rounded-full justify-center items-center flex border-2 border-border"><i class="fa-solid fa-headset"></i></p>
                 </div>
-                <h1 class="text-xl text-card-font font-mont font-semibold">Want to Chat Now</h1>
-                <p class="text-md text-card-font font-mont">Chat with me its more experts of find out more and more informative way to learn about me.</p>
+                <h2 class="text-xl text-cardFont font-mont font-semibold">Want to Chat Now</h2>
+                <p class="text-md text-cardFont font-mont">Chat with me its more experts of find out more and more informative way to learn about me.</p>
                  
               </div>
               <a href="#" class="px-4 py-3 rounded-full bg-primary text-body mt-8 hover:bg-body hover:text-primary border-1  hover:border-primary flex justify-center gap-3 items-center ">Open Chat With Me <i class="fa-solid fa-arrow-right"></i></a>
@@ -793,13 +797,13 @@
         <!-- newsletter section -->
          <div class="md:max-w-[90%] w-full mx-auto mt-20 mb-20 bg-card rounded-xl border-1 border-border md:px-16 md:py-16 py-10 shadow-sm shadow-border">
             <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-between items-center gap-4">
-              <div class="text-white md:text-4xl lg:5xl text-2xl font-mont font-semibold text-center">
+              <div class="text-white md:text-4xl lg:5xl text-3xl font-mont font-semibold text-center mb-4">
                 <h1>Subscribe Newsletter</h1>
               </div>
               <div class="w-full">
                 <form
-                    class="flex rounded-full md:px-4 md:py-2 bg-card border-2 border-border mx-3">
-                    <input type="email" placeholder="Enter Your Email" class="w-full  rounded-full bg-card text-card-font placeholder:font-mont border-none focus:ring-border"/>
+                    class="flex rounded-full px-2 py-1 md:px-4 md:py-2 bg-body border-2 border-body mx-3">
+                    <input type="email" placeholder="Enter Your Email" class="w-full px-2  rounded-full bg-body text-cardFont placeholder:font-mont border-none focus:outline-none">
                     <button class="shrink-0 flex justify-between items-center gap-1 md:gap-3 font-mont rounded-full bg-primary text-body md:px-6 md:py-3 py-2 px-4 md:text-md text-sm font-medium" type="submit">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
@@ -810,13 +814,13 @@
          <!-- footer div -->
           
           <div class="md:max-w-[80%] w-full mx-auto flex flex-col md:flex-row gap-10 justify-center items-center md:justify-between md:items-center mb-20">
-            <div class="flex md:gap-8 gap-4 text-sm md:text-md items-center font-mont text-card-font">
+            <div class="flex md:gap-8 gap-4 text-sm md:text-md items-center font-mont text-cardFont">
               <a href="#">ABOUT US</a>
               <a href="#">DISCOVER</a>
               <a href="#">EXPLORE</a>
               <a href="#">BOOKS</a>
             </div>
-            <div class="flex md:gap-10 gap-8 items-center font-mont text-card-font md:text-3xl ">
+            <div class="flex md:gap-10 gap-8 items-center font-mont text-lg text-cardFont md:text-3xl ">
               <a href="#"><i class="fa-brands fa-facebook"></i></a>
               <a href="#"><i class="fa-brands fa-twitter"></i></a>
               <a href="#"><i class="fa-brands fa-vimeo-v"></i></a>
@@ -825,20 +829,20 @@
           </div>
           <hr class="border-1 border-border max-w-[80%] mx-auto">
           <!-- copywrite & policy -->
-          <div class="md:max-w-[80%] w-full mx-auto flex flex-col md:flex-row gap-10 md:justify-between items-center mt-10 mb-20 font-mont text-card-font">
+          <div class="md:max-w-[80%] w-full mx-auto flex flex-col md:flex-row gap-10 md:justify-between items-center mt-10 mb-20 font-mont text-cardFont">
             <div>
               <p class="flex gap-2 items-center font-mont"><i class="fa-regular fa-copyright"></i>2025 <span class="text-primary"> SoftCode Loop </span> |  All rights reserved.</p>
             </div>
-            <img src="assets/images/softcodeloop.png" alt="" class="h-16 w-60"/>
+            <img src="assets/images/softcodeloop.png" alt="" class="h-16 w-60">
             <div class=" flex gap-10 justify-between items-center font-mont">
-              <a href="" class="text-card-font">Privacy Policy</a>
-              <a href="" class="text-card-font">Terms & Conditions</a>
+              <a href="" class="text-cardFont">Privacy Policy</a>
+              <a href="" class="text-cardFont">Terms & Conditions</a>
             </div>
 
           </div>
        </section>
 
- </section>
+
 
  
 
