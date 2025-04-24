@@ -35,47 +35,51 @@
 </head>
 <body class="bg-body mx-auto">
 
-<nav class="max-w-[80%] bg-body mx-auto px-6 py-4 flex items-center justify-between relative z-50">
-  <!-- Logo -->
-  <div class="flex items-center space-x-2">
-    <img src="assets/images/softcodeloop.png" alt="" class="h-10 w-42">
-  </div>
-
-  <!-- Hamburger Icon -->
-  <div class="lg:hidden">
-    <button id="menu-toggle" class="focus:outline-none">
-      <svg class="w-6 h-6 text-[#87F5FF]" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Menu Items -->
-  <ul id="menu"
-      class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:space-x-6 text-sm absolute lg:static top-full left-0 w-full lg:w-auto bg-body lg:bg-transparent mt-2 lg:mt-0 px-6 lg:px-0 py-4 lg:py-0 ">
-    <li><a href="index.html" class="nav-glow relative hover:text-primary text-white block py-2 lg:py-0 active:text-primary font-mont">Home</a></li>
-    <li><a href="" class="nav-glow relative  font-mont hover:text-primary text-white block py-2 lg:py-0">Service</a></li>
-    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Portfolio</a></li>
-    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">My Skills</a></li>
-    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Testimonials</a></li>
-    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Blog</a></li>
-    <li><a href="#" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Contact</a></li>
-    <!-- for hamburger -->
-    <li class="lg:hidden mt-2 flex flex-col space-y-2">
-      <a href="#" class="px-4 py-2 border border-primary hover:bg-primary hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
-      <a href="#" class="px-4 py-2 bg-primary text-black font-normal rounded-full text-sm text-center font-mont transition delay-75 duration-300 ease-in-out border hover:bg-body hover:text-primary hover:border-primary">Buy Now</a>
-    </li>
-    <!-- for desktop -->
-    <li class="hidden lg:flex space-x-2 rtl:space-x-reverse">
-      <a href="#" class="px-4 py-2 border border-primary md:hover:bg-primary md:hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
-      <a href="#" class="px-4 py-2 bg-primary md:hover:bg-body md:hover:text-primary md:hover:border md:border font-mont rounded-full text-sm text-center transition delay-75 duration-300 ease-in-out">Buy Now</a>
+<!-- navbar  -->
+<header class="relative mb-10">
+  <nav class="fixed top-0 left-0 right-0 max-w-[80%] bg-body rounded-bl-xl rounded-br-xl mb-20 mx-auto px-6 py-4 flex items-center justify-between  z-50">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="assets/images/softcodeloop.png" alt="" class="h-10 w-42">
+    </div>
+  
+    <!-- Hamburger Icon -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="focus:outline-none">
+        <svg class="w-6 h-6 text-[#87F5FF]" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Menu Items -->
+    <ul id="menu"
+        class="hidden flex-col lg:flex lg:flex-row lg:items-center lg:space-x-6 text-sm absolute lg:static top-full left-0 w-full lg:w-auto bg-body lg:bg-transparent mt-2 lg:mt-0 px-6 lg:px-0 py-4 lg:py-0 ">
+      <li><a href="#home" class="nav-glow  relative hover:text-primary text-white block py-2 lg:py-0 font-mont">Home</a></li>
+      <li><a href="#services" class="nav-glow relative  font-mont hover:text-primary text-white block py-2 lg:py-0">Service</a></li>
+      <li><a href="#portfolio" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Portfolio</a></li>
+      <li><a href="#myskills" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">My Skills</a></li>
+      <li><a href="#testimonials" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Testimonials</a></li>
+      <li><a href="#blog" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Blog</a></li>
+      <li><a href="#contact" class="nav-glow relative font-mont hover:text-primary text-white block py-2 lg:py-0">Contact</a></li>
+      <!-- for hamburger -->
+      <li class="lg:hidden mt-2 flex flex-col space-y-2">
+        <a href="#" class="px-4 py-2 border border-primary hover:bg-primary hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
+        <a href="#" class="px-4 py-2 bg-primary text-black font-normal rounded-full text-sm text-center font-mont transition delay-75 duration-300 ease-in-out border-1 hover:bg-body hover:text-primary hover:border-primary">Buy Now</a>
       </li>
-  </ul>
-</nav>
+      <!-- for desktop -->
+      <li class="hidden lg:flex space-x-2 rtl:space-x-reverse">
+        <a href="#" class="px-4 py-2 border border-primary md:hover:bg-primary md:hover:text-body rounded-full text-primary text-sm text-center font-mont transition delay-75 duration-300 ease-in-out">Let's Talk</a>
+        <a href="#" class="px-4 py-2 bg-primary md:hover:bg-body md:hover:text-primary md:hover:border md:border font-mont rounded-full text-sm text-center border-primary transition delay-75 duration-300 ease-in-out">Buy Now</a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
           <!-- HERO SECTION -->
-           <section class="hero-section max-w-[80%] mx-auto bg-[#10102b] flex lg:justify-between lg:items-center relative mt-20 lg:mt-10 lg:pt-0 lg:pb-0 pt-10 pb-10 lg:pt-0 lg:pb-0 border border-border rounded-3xl ">  
+           <section id="home" class="hero-section max-w-[80%] mx-auto bg-[#10102b] flex lg:justify-between lg:items-center relative mt-20 md:mt-18 lg:mt-20 lg:pt-0 lg:pb-0 pt-10 pb-10 lg:pt-0 lg:pb-0 border border-border rounded-3xl ">  
             <div class=" ml-10 flex flex-col justify-between relative">
   
               <!-- welcome to my world-->
@@ -186,7 +190,7 @@
   
 </section>
 <!-- my works section -->
-<section class="max-w-[90%] mx-auto mt-20">
+<section id="portfolio" class="max-w-[90%] mx-auto mt-20">
   <!-- work heading-->
   <div>
     <div class="mt-20 flex flex-col justify-center items-center">
@@ -206,18 +210,18 @@
     </div>
   </div>
 <!-- work navigatin buttons -->
- <div class="w-full flex justify-center items-center gap-4 mt-12 overflow-x-auto font-mont">
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out  border-border rounded-full" >All Projects</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >Web Design</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >Figma Design</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >Photoshop</a>
-    <a href="#" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full" >React JS</a>
+ <div class="custom_btn w-full flex justify-center items-center gap-4 mt-12 overflow-x-auto font-mont">
+    <button type="button" class=" active:bg-primary px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out  border-border rounded-full" data-filter="all"  >All Projects</button>
+    <button type="button" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full"  data-filter=".web" >Web Design</button>
+    <button type="button" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full"  data-filter=".figma" >Figma Design</button>
+    <button type="button" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full"  data-filter=".photoshop" >Photoshop</button>
+    <button type="button" class=" px-6 py-2 text-sm text-white hover:bg-primary hover:text-body border-2 hover:ease-in-out hover:duration-300 transition duration-300 delay-75 ease-in-out border-border rounded-full"  data-filter=".react" >React JS</button>
  </div>
  <!-- card design -->
- <div class="grid grid-cols-1 md:grid-cols-1 md:items-center md:justify-center lg:grid-cols-2 gap-10 md:gap-4 lg:gap-6 mt-10 font-mont text-white">
+ <div class="container grid grid-cols-1 md:grid-cols-1 md:items-center md:justify-center lg:grid-cols-2 gap-10 md:gap-4 lg:gap-6 mt-10 font-mont text-white">
     
       <!-- card one -->
-    <div class="mb-6 md:w-[90%]">
+    <div class="mix web react mb-6 md:w-[90%]">
       <div class=" second-card h-auto py-6 px-4 w-auto bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
         <img src="assets/images/image96.png" alt="" class="rounded-lg">
       </div>
@@ -225,7 +229,7 @@
         <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
     </div>
     <!-- card 2 -->
-    <div class="mb-6 md:w-[90%]">
+    <div class=" mix figma photoshop  md:w-[90%]">
       <div class=" second-card  h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
         <img src="assets/images/image97.png" alt="" class="rounded-lg">
       </div>
@@ -233,7 +237,7 @@
       <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Exploring Cutting Edge Techno Learn Shaping Tomorrow</h1>
     </div>
     <!-- card 3 -->
-    <div class="mb-6 md:w-[90%]">
+    <div class="mix photoshop  mb-6 md:w-[90%]">
       <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
         <img src="assets/images/image98.png" alt="" class="rounded-lg">
       </div>
@@ -241,7 +245,7 @@
         <h1 class="md:text-3xl text-2xl font-mont font-bold  mt-2 ml-2 md:leading-12">Both API styles are fully capable of covering common use cases.</h1>
     </div>
      <!-- card 4 -->
-     <div class="mb-6 md:w-[90%]">
+     <div class="mix web react mb-6 md:w-[90%]">
       <div class=" second-card h-auto py-6 px-4 w-auto  bg-card rounded-xl flex flex-col justify-center items-center border-2 border-border hover:shadow-lg hover:shadow-blue-950 transition duration-300 delay-75 ease-in-out">
         <img src="assets/images/image98.png" alt="" class="rounded-lg">
       </div>
@@ -253,7 +257,7 @@
 </section>
 
 <!-- Awesome Skills Section -->
- <section class="skills mt-20 mb-20 rounded-tl-2xl rounded-tr-2xl">
+ <section id="myskills" class="skills mt-20 mb-20 rounded-tl-2xl rounded-tr-2xl">
   <div class="max-w-[80%] mx-auto  ">
        <!-- skills section heading -->
   <div class="mt-6 flex flex-col justify-center items-center">
@@ -423,7 +427,7 @@
     </section>
 
     <!-- Clients Review section-->
-     <section class="max-w-[90%] mx-auto mt-20 mb-20">
+     <section id="testimonials" class="max-w-[90%] mx-auto mt-20 mb-20">
       <!-- review heading-->
       <div class="lg:flex lg:justify-between lg:items-center justify-center items-center mb-20">
         <div class="mt-20 flex flex-col items-center lg:items-start w-full">
@@ -613,7 +617,7 @@
 
      <!-- Blog section -->
 
-     <section class="max-w-[80%] mx-auto mt-10 mb-20">
+     <section id="blog" class="max-w-[80%] mx-auto mt-10 mb-20">
           <!-- Section heading -->
           <div class="mt-20 flex flex-col justify-center items-center">
             <div class="relative px-4 py-4 mb-4 mt-6">
@@ -709,7 +713,7 @@
      </section>
 
      <!-- contact Section -->
-      <section class="md:max-w-[80%] max-w-[90%] mx-auto mt-20 mb-20">
+      <section id="contact" class="md:max-w-[80%] max-w-[90%] mx-auto mt-20 mb-20">
         <!-- contact section heading -->
         <div class="mt-20 flex flex-col justify-center items-center">
           <div class="relative px-4 py-4 mb-4 mt-6">
@@ -841,14 +845,8 @@
 
           </div>
        </section>
-
-
-
- 
-
-
-    <!-- FLOWBITE SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+ <!-- MIX IT UP PLUGIN CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- FONT AWESOME SCRIPT -->
     <script src="https://kit.fontawesome.com/ca9429cf5d.js" crossorigin="anonymous"></script>
     <!-- MAIN SCRIPT -->

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Portfolio Template Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --font-main: 'Poppins', sans-serif;
+            --font-code: 'Roboto Mono', monospace;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7ff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 15px;
+            color: var(--accent);
+        }
+
+        .version-badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        /* Main content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            background: white;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 8px 10px;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            color: var(--primary);
+            background-color: rgba(67, 97, 238, 0.1);
+        }
+
+        .sidebar a i {
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Documentation content */
+        .documentation {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 20px;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h2 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .section h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9ff;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-card h4 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        /* Code blocks */
+        pre {
+            background: #1a1a2e;
+            color: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--radius);
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+        }
+
+        code {
+            font-family: var(--font-code);
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Folder structure */
+        .folder-structure {
+            background: #f8f9ff;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            font-family: var(--font-code);
+            line-height: 1.8;
+            margin: 1.5rem 0;
+        }
+
+        .folder {
+            margin-left: 15px;
+        }
+
+        .folder::before {
+            content: "📁 ";
+        }
+
+        .file {
+            margin-left: 30px;
+        }
+
+        .file::before {
+            content: "📄 ";
+        }
+
+        /* Alert boxes */
+        .alert {
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .alert i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .alert-info {
+            background-color: rgba(67, 97, 238, 0.1);
+            border-left: 4px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .alert-warning {
+            background-color: rgba(247, 37, 133, 0.1);
+            border-left: 4px solid var(--warning);
+            color: var(--warning);
+        }
+
+        .alert-success {
+            background-color: rgba(76, 201, 240, 0.1);
+            border-left: 4px solid var(--success);
+            color: var(--success);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .feature-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-content {
+                padding: 0 15px;
+            }
+            
+            .documentation, .sidebar {
+                padding: 1.5rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Freelancer Portfolio</span>
+            </div>
+            <div class="version-badge">Version 0.1.0 | Last Updated: April 24, 2025</div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <aside class="sidebar">
+            <h3>Documentation</h3>
+            <ul>
+                <li><a href="#introduction" class="active"><i class="fas fa-rocket"></i> Introduction</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#folder-structure"><i class="fas fa-folder-open"></i> Folder Structure</a></li>
+                <li><a href="#installation"><i class="fas fa-download"></i> Installation</a></li>
+                <li><a href="#editing"><i class="fas fa-edit"></i> Editing Guide</a></li>
+                <li><a href="#customization"><i class="fas fa-palette"></i> Customization</a></li>
+                <li><a href="#sections"><i class="fas fa-plus-square"></i> Adding Sections</a></li>
+                <li><a href="#contact-form"><i class="fas fa-envelope"></i> Contact Form</a></li>
+                <li><a href="#best-practices"><i class="fas fa-check-circle"></i> Best Practices</a></li>
+                <li><a href="#credits"><i class="fas fa-heart"></i> Credits</a></li>
+                <li><a href="#support"><i class="fas fa-life-ring"></i> Support</a></li>
+            </ul>
+        </aside>
+
+        <main class="documentation">
+            <section id="introduction" class="section">
+                <h2><i class="fas fa-rocket"></i> Introduction</h2>
+                <p>Thank you for purchasing <strong>Freelancer Portfolio - Single Page HTML Template</strong>. Thank you for purchasing Freelancer Portfolio - Single Page HTML Template. This template is built using pure HTML5, CSS3, Tailwind, and a touch of vanilla JavaScript with jQuery integration. It's clean, responsive, and easy to customize, making it perfect for freelancers, developers, designers, or any professional personal portfolio.</p>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>This template requires no build tools or dependencies - just pure frontend code that works anywhere!</div>
+                </div>
+            </section>
+
+            <section id="features" class="section">
+                <h2><i class="fas fa-star"></i> Template Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-broom"></i> Clean & Minimal</h4>
+                        <p>Professional design that puts your content first without unnecessary distractions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-mobile-alt"></i> Fully Responsive</h4>
+                        <p>Looks great on all devices from mobile phones to large desktop screens.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-code"></i> Modern Standards</h4>
+                        <p>Built with semantic HTML5, CSS3 variables, and lightweight JavaScript.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-code"></i> Modern Tools</h4>
+                        <p>Crafted using Tailwind CSS for utility-first styling and MixItUp for seamless filtering and sorting animations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><i class="fas fa-images"></i> Portfolio Gallery</h4>
+                        <p>Showcase your work with an attractive, easy-to-navigate gallery.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-scroll"></i> Smooth Scrolling</h4>
+                        <p>Elegant navigation between sections with smooth scroll effects.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-chart-bar"></i> Animated Elements</h4>
+                        <p>Skill bars, counters, and other interactive elements to engage visitors.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-cogs"></i> Easy Customization</h4>
+                        <p>Well-organized code with clear comments for easy modification.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-tachometer-alt"></i> Optimized Performance</h4>
+                        <p>Lightweight code for fast loading times and better SEO.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="folder-structure" class="section">
+                <h2><i class="fas fa-folder-open"></i> Folder Structure</h2>
+                <p>The template follows a simple and logical folder structure:</p>
+                
+                <div class="folder-structure">
+                    freelancer-portfolio/<br>
+                    │<br>
+                    ├──<span class="folder">Documentation/</span><br>
+                    |   └── documentation<br>
+                    ├──<span class="folder">HTML/</span><br>
+                    │   |──<span class="folder">assets/</span><br>
+                    │   |    |──<span class="folder">css/</span><br>
+                    │   |    |    └──<span class="file">index.css</span><br>
+                    │   |    |──<span class="folder">img/</span><br>
+                    │   |    |    └──<span class="file">image.jpg</span><br>
+                    │   |    |──<span class="folder">js/</span><br>
+                    │   |         └──<span class="file">index.js</span><br>
+                    │   |     <br>
+                    │   |──<span class="file">index.html</span><br>
+                    |<br>
+                    |<br>
+                    ├──<span class="folder">Licenseing/</span><br>
+                    │   └──<span class="file">LICENSE.txt</span><br>
+                    |<br>
+                    └──<span class="file">README.md</span>
+                </div>
+            </section>
+
+            <section id="installation" class="section">
+                <h2><i class="fas fa-download"></i> Installation</h2>
+                <p>Getting started with the template is incredibly simple:</p>
+                
+                <h3>Local Setup</h3>
+                <ol>
+                    <li>Extract the ZIP file you downloaded</li>
+                    <li>Open the <code>HTML/index.html</code> file in any web browser</li>
+                    <li>That's it! No build process or dependencies required</li>
+                </ol>
+                
+                <h3>Web Hosting Deployment</h3>
+                <ol>
+                    <li>Upload the entire contents of the <code>HTML</code> folder to your web server</li>
+                    <li>You can use an FTP client (like FileZilla) or your hosting provider's file manager</li>
+                    <li>Ensure the main <code>index.html</code> is in the root directory or appropriate subfolder</li>
+                </ol>
+                
+                <div class="alert alert-success">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>For best results, upload all files maintaining the same folder structure as in the template package.</div>
+                </div>
+            </section>
+
+            <section id="editing" class="section">
+                <h2><i class="fas fa-edit"></i> Editing the Template</h2>
+                
+                <h3>Changing Text Content</h3>
+                <p>Open <code>index.html</code> with a code editor (like VS Code, Sublime Text, or Atom). Locate the text you want to change and replace it directly in the HTML.</p>
+                
+                <p>Example:</p>
+                <pre>&lt;h1&gt;Hello, I'm &lt;span&gt;Your Name&lt;/span&gt;&lt;/h1&gt;</pre>
+                
+                <p>Change to:</p>
+                <pre>&lt;h1&gt;Hello, I'm &lt;span&gt;John Doe&lt;/span&gt;&lt;/h1&gt;</pre>
+                
+                <h3>Replacing Images</h3>
+                <ol>
+                    <li>Go to the <code>assets/img/</code> folder</li>
+                    <li>Replace any image (keeping the same name) or update the <code>src</code> in HTML</li>
+                </ol>
+                
+                <p>Example:</p>
+                <pre>&lt;img src="images/profile.jpg" alt="Profile Image"&gt;</pre>
+                
+                <p>Change the file name or path accordingly if you add your own images.</p>
+                
+                <h3>Changing Colors</h3>
+                <p>All styles are located in <code>css/style.css</code>.</p>
+                <p>To change colors, search for the existing color code or class:</p>
+                
+                <pre>:root {
+  --primary-color: #3498db;
+}</pre>
+                
+                <p>Replace the value of <code>--primary-color</code> to your desired color code (e.g., <code>#e74c3c</code>).</p>
+                
+                <div class="alert alert-info">
+                    <i class="fas fa-palette"></i>
+                    <div>Use a tool like <a href="https://coolors.co" target="_blank">Coolors</a> or <a href="https://colorhunt.co" target="_blank">ColorHunt</a> to help choose a color palette.</div>
+                </div>
+                
+                <h3>Updating Social Links</h3>
+                <p>Find the social links section in <code>index.html</code>:</p>
+                
+                <pre>&lt;a href="https://linkedin.com/in/username" target="_blank"&gt;LinkedIn&lt;/a&gt;</pre>
+                
+                <p>Update the URLs with your own profiles.</p>
+            </section>
+
+            <section id="customization" class="section">
+                <h2><i class="fas fa-palette"></i> Customization Guide</h2>
+                
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div><strong>Pro Tip:</strong> Always keep a backup of your original files before making changes!</div>
+                </div>
+                
+                <h3>General Guidelines</h3>
+                <ul>
+                    <li>Use semantic HTML5 tags (<code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, etc.) for adding new content</li>
+                    <li>Follow existing class naming patterns to maintain design consistency</li>
+                    <li>Duplicate existing <code>&lt;section&gt;</code> blocks to add more content areas</li>
+                    <li>Use the comments in the HTML and CSS files to identify editable parts</li>
+                    <li>For major redesigns, consider creating a new stylesheet instead of modifying the existing one</li>
+                </ul>
+                
+                <h3>CSS Customization Tips</h3>
+                <p>The template uses CSS variables for easy theming. You'll find them at the top of the CSS file:</p>
+                
+                <pre>:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --light-bg: #f9f9f9;
+  --dark-bg: #2c3e50;
+}</pre>
+                
+                <p>Modifying these variables will automatically update colors throughout the template.</p>
+            </section>
+
+            <section id="sections" class="section">
+                <h2><i class="fas fa-plus-square"></i> Adding New Sections</h2>
+                
+                <p>To add a new section to your portfolio:</p>
+                
+                <ol>
+                    <li>Open <code>index.html</code></li>
+                    <li>Copy an existing <code>&lt;section&gt;</code> block</li>
+                    <li>Paste it where needed and change the <code>id</code> and content</li>
+                </ol>
+                
+                <p>Example:</p>
+                <pre>&lt;section id="services"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Services&lt;/h2&gt;
+    &lt;p&gt;Describe your services here...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+                
+                <p>Don't forget to update your navigation links if needed by adding a new menu item that links to your section's ID (e.g., <code>#services</code>).</p>
+            </section>
+
+            <section id="contact-form" class="section">
+                <h2><i class="fas fa-envelope"></i> Contact Form Setup</h2>
+                
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div><strong>Important:</strong> The contact form requires server-side processing to function. HTML alone cannot send emails.</div>
+                </div>
+                
+                <h3>Using Formspree</h3>
+                <p>For quick setup without server-side coding:</p>
+                
+                <ol>
+                    <li>Go to <a href="https://formspree.io/" target="_blank">https://formspree.io/</a></li>
+                    <li>Sign up and get your form endpoint</li>
+                    <li>Replace the form action in your HTML:</li>
+                </ol>
+                
+                <pre>&lt;form action="https://formspree.io/f/yourID" method="POST"&gt;</pre>
+                
+                <h3>Alternative Services</h3>
+                <p>Other similar services you can use:</p>
+                <ul>
+                    <li><a href="https://getform.io/" target="_blank">GetForm</a></li>
+                    <li><a href="https://www.formbucket.com/" target="_blank">FormBucket</a></li>
+                    <li><a href="https://formsubmit.co/" target="_blank">FormSubmit</a></li>
+                </ul>
+            </section>
+
+            <section id="best-practices" class="section">
+                <h2><i class="fas fa-check-circle"></i> Best Practices & Guidelines</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-save"></i> Backups</h4>
+                        <p>Always keep a backup before editing. Consider using version control like Git.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-image"></i> Image Optimization</h4>
+                        <p>Compress images for faster load times. Use tools like TinyPNG or Squoosh.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-search"></i> SEO</h4>
+                        <p>Use descriptive alt attributes for images and semantic HTML structure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-mobile-alt"></i> Responsiveness</h4>
+                        <p>Test on different devices and browsers to ensure consistent appearance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-tachometer-alt"></i> Performance</h4>
+                        <p>Keep JavaScript minimal and defer non-critical scripts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-check-double"></i> Validation</h4>
+                        <p>Use the <a href="https://validator.w3.org/" target="_blank">W3C Validator</a> to check your HTML.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="credits" class="section">
+                <h2><i class="fas fa-heart"></i> Sources & Credits</h2>
+                
+                <h3>Fonts</h3>
+                <ul>
+                    <li>Google Fonts - <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a></li>
+                </ul>
+                
+                <h3>Icons</h3>
+                <ul>
+                    <li>Font Awesome - <a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a></li>
+                </ul>
+                
+                <h3>Images</h3>
+                <ul>
+                    <li>Unsplash - <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a></li>
+                    <li>Pexels - <a href="https://www.pexels.com/" target="_blank">https://www.pexels.com/</a></li>
+                </ul>
+                
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div><strong>Note:</strong> Replace or properly license all stock images before publishing your live site.</div>
+                </div>
+            </section>
+
+            <section id="support" class="section">
+                <h2><i class="fas fa-life-ring"></i> Support & Help</h2>
+                
+                <p>If you run into any issues or have questions not covered in this documentation:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4><i class="fas fa-envelope"></i> Email Support</h4>
+                        <p>📧 <a href="mailto:hello@softcodeloop.com">hello@softcodeloop.com</a></p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-book"></i> Documentation Updates</h4>
+                        <p>Included in future template versions</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4><i class="fas fa-code"></i> Customizations</h4>
+                        <p>Minor customizations available upon request</p>
+                    </div>
+                </div>
+                
+                <h3>Changelog</h3>
+                <p><strong>Version 0.1.0</strong> - April 24, 2025</p>
+                <ul>
+                    <li>Initial release</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">SoftCode Loop</div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Templates</a>
+                <a href="#">Documentation</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 SoftCode Loop. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active state in sidebar
+                document.querySelectorAll('.sidebar a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Update active link based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.sidebar a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
